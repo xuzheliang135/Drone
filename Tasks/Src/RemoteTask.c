@@ -300,6 +300,6 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *UartHandle)
 	}
 	else if(UartHandle == &JUDGE_UART)
 	{
-		judgeUartRxCpltCallback();  //裁判系统数据解算
+		//judgeUartRxCpltCallback();  //裁判系统数据解算
 	}
 }   

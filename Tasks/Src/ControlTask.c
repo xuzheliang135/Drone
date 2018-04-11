@@ -13,8 +13,6 @@
 
 ///*通过define使一套程序使用多台车*/
 #define INFANTRY_1
-//#define INFANTRY_4
-//#define INFANTRY_5   
 
 #define LED_GREEN_TOGGLE() HAL_GPIO_TogglePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin)
 #define LED_RED_TOGGLE()   HAL_GPIO_TogglePin(LED_RED_GPIO_Port, LED_RED_Pin)
@@ -26,27 +24,20 @@
 WorkState_e WorkState = PREPARE_STATE;
 uint16_t prepare_time = 0;
 
-PID_Regulator_t CMRotatePID = CHASSIS_MOTOR_ROTATE_PID_DEFAULT; 
 PID_Regulator_t CM1SpeedPID = CHASSIS_MOTOR_SPEED_PID_DEFAULT;
-PID_Regulator_t CM2SpeedPID = CHASSIS_MOTOR_SPEED_PID_DEFAULT;
-PID_Regulator_t CM3SpeedPID = CHASSIS_MOTOR_SPEED_PID_DEFAULT;
-PID_Regulator_t CM4SpeedPID = CHASSIS_MOTOR_SPEED_PID_DEFAULT;
 
-int16_t CMFLIntensity = 0, CMFRIntensity = 0, CMBLIntensity = 0, CMBRIntensity = 0;
+
+int16_t CMFLIntensity = 0;
 int16_t yawIntensity = 0;		
 int16_t pitchIntensity = 0;
 
 //底盘PID初始化
 void CMControlInit(void)
 {
-	CMRotatePID.Reset(&CMRotatePID);
 	CM1SpeedPID.Reset(&CM1SpeedPID);
-	CM2SpeedPID.Reset(&CM2SpeedPID);
-	CM3SpeedPID.Reset(&CM3SpeedPID);
-	CM4SpeedPID.Reset(&CM4SpeedPID);
 }
 
-//单个底盘电机的控制，下同
+//单个电机的控制
 void ControlCMFL(void)
 {			
 	CM1SpeedPID.ref =  ChassisSpeedRef.forward_back_ref*0.075 
@@ -61,47 +52,6 @@ void ControlCMFL(void)
 	CMFLIntensity = CHASSIS_SPEED_ATTENUATION * CM1SpeedPID.output;
 }
 
-void ControlCMFR(void)
-{			
-	CM2SpeedPID.ref = - ChassisSpeedRef.forward_back_ref*0.075 
-										 + ChassisSpeedRef.left_right_ref*0.075 
-										 + ChassisSpeedRef.rotate_ref*0.075;
-	CM2SpeedPID.ref = 160 * CM2SpeedPID.ref;
-			
-			
-	CM2SpeedPID.fdb = CMFRRx.RotateSpeed;
-
-	CM2SpeedPID.Calc(&CM2SpeedPID);
-	CMFRIntensity = CHASSIS_SPEED_ATTENUATION * CM2SpeedPID.output;
-}
-
-void ControlCMBL(void)
-{		
-	CM3SpeedPID.ref =  ChassisSpeedRef.forward_back_ref*0.075 
-											 - ChassisSpeedRef.left_right_ref*0.075 
-											 + ChassisSpeedRef.rotate_ref*0.075;
-	CM3SpeedPID.ref = 160 * CM3SpeedPID.ref;
-			
-			
-	CM3SpeedPID.fdb = CMBLRx.RotateSpeed;
-
-	CM3SpeedPID.Calc(&CM3SpeedPID);
-	CMBLIntensity = CHASSIS_SPEED_ATTENUATION * CM3SpeedPID.output;
-}
-
-void ControlCMBR(void)
-{		
-	CM4SpeedPID.ref = - ChassisSpeedRef.forward_back_ref*0.075 
-											 - ChassisSpeedRef.left_right_ref*0.075 
-											 + ChassisSpeedRef.rotate_ref*0.075;
-	CM4SpeedPID.ref = 160 * CM4SpeedPID.ref;
-			
-			
-	CM4SpeedPID.fdb = CMBRRx.RotateSpeed;
-
-	CM4SpeedPID.Calc(&CM4SpeedPID);
-	CMBRIntensity = CHASSIS_SPEED_ATTENUATION * CM4SpeedPID.output;
-}
 
 //状态机切换
 void WorkStateFSM(void)
@@ -112,9 +62,8 @@ void WorkStateFSM(void)
 		{
 			if (inputmode == STOP) WorkState = STOP_STATE;
 			
-			if(prepare_time<5000) prepare_time++;
-			if(prepare_time == 3000) GYRO_RST();//开机三秒复位陀螺仪
-			if(prepare_time == 5000)//开机五秒进入正常模式
+			if(prepare_time<2000) prepare_time++;
+			if(prepare_time == 2000)//开机两秒进入正常模式
 			{
 				WorkState = NORMAL_STATE;
 				prepare_time = 0;
@@ -148,12 +97,6 @@ void setCMMotor()
 	
 	CMGMMOTOR_CAN.pTxMsg->Data[0] = (uint8_t)(CMFLIntensity >> 8);
 	CMGMMOTOR_CAN.pTxMsg->Data[1] = (uint8_t)CMFLIntensity;
-	CMGMMOTOR_CAN.pTxMsg->Data[2] = (uint8_t)(CMFRIntensity >> 8);
-	CMGMMOTOR_CAN.pTxMsg->Data[3] = (uint8_t)CMFRIntensity;
-	CMGMMOTOR_CAN.pTxMsg->Data[4] = (uint8_t)(CMBLIntensity >> 8);
-	CMGMMOTOR_CAN.pTxMsg->Data[5] = (uint8_t)CMBLIntensity;
-	CMGMMOTOR_CAN.pTxMsg->Data[6] = (uint8_t)(CMBRIntensity >> 8);
-	CMGMMOTOR_CAN.pTxMsg->Data[7] = (uint8_t)CMBRIntensity;
 
 	if(can1_update == 1 && can1_type == 0)
 	{
@@ -232,23 +175,7 @@ void setGMMotor()
 
 #define NORMALIZE_ANGLE180(angle) angle = ((angle) > 180) ? ((angle) - 360) : (((angle) < -180) ? (angle) + 360 : angle)
 
-#ifdef INFANTRY_5
-fw_PID_Regulator_t pitchPositionPID = fw_PID_INIT(8.0, 0.0, 0.0, 10000.0, 10000.0, 10000.0, 10000.0);
-fw_PID_Regulator_t yawPositionPID = fw_PID_INIT(5.0, 0.0, 0.5, 10000.0, 10000.0, 10000.0, 10000.0);//等幅振荡P37.3 I11.9 D3.75  原26.1 8.0 1.1
-fw_PID_Regulator_t pitchSpeedPID = fw_PID_INIT(40.0, 0.0, 15.0, 10000.0, 10000.0, 10000.0, 3500.0);
-fw_PID_Regulator_t yawSpeedPID = fw_PID_INIT(30.0, 0.0, 5, 10000.0, 10000.0, 10000.0, 4000.0);
-//手动标定0点
-#define yaw_zero 2163//2200
-#define pitch_zero 3275
-#endif
-#ifdef INFANTRY_4
-fw_PID_Regulator_t pitchPositionPID = fw_PID_INIT(8.0, 0.0, 0.0, 10000.0, 10000.0, 10000.0, 10000.0);
-fw_PID_Regulator_t yawPositionPID = fw_PID_INIT(8.0, 0.0, 0.5, 10000.0, 10000.0, 10000.0, 10000.0);//等幅振荡P37.3 I11.9 D3.75  原26.1 8.0 1.1
-fw_PID_Regulator_t pitchSpeedPID = fw_PID_INIT(40.0, 0.0, 15.0, 10000.0, 10000.0, 10000.0, 4000.0);
-fw_PID_Regulator_t yawSpeedPID = fw_PID_INIT(70.0, 0.0, 5, 10000.0, 10000.0, 10000.0, 4000.0);
-#define yaw_zero 2806//2840
-#define pitch_zero 5009 
-#endif
+
 #ifdef INFANTRY_1
 fw_PID_Regulator_t pitchPositionPID = fw_PID_INIT(8.0, 0.0, 0.0, 10000.0, 10000.0, 10000.0, 10000.0);
 fw_PID_Regulator_t yawPositionPID = fw_PID_INIT(5.0, 0.0, 0.5, 10000.0, 10000.0, 10000.0, 10000.0);//等幅振荡P37.3 I11.9 D3.75  原26.1 8.0 1.1
@@ -261,42 +188,29 @@ fw_PID_Regulator_t yawSpeedPID = fw_PID_INIT(25.0, 0.0, 5, 10000.0, 10000.0, 100
 float yawRealAngle = 0.0;
 float pitchRealAngle = 0.0;
 float gap_angle = 0.0;
-//底盘跟随云台旋转控制
-void ControlRotate(void)
-{
-	gap_angle  = (GMYAWRx.angle - yaw_zero) * 360 / 8192.0f;
-  NORMALIZE_ANGLE180(gap_angle);	
-	
-	if(WorkState == NORMAL_STATE) 
-	{
-		CMRotatePID.ref = 0;
-		CMRotatePID.fdb = gap_angle;
-		CMRotatePID.Calc(&CMRotatePID);   
-		ChassisSpeedRef.rotate_ref = CMRotatePID.output * 13 + rotate_forward * 90 + ChassisSpeedRef.forward_back_ref * 0.01 + ChassisSpeedRef.left_right_ref * 0.01;
-	}
-}
 
 //控制云台YAW轴
 void ControlYaw(void)
-{
+{	
+	static float last_angel=yaw_zero;
+	const float pulse_time=1;
+	
 	uint16_t yawZeroAngle = yaw_zero;
 			
 	yawRealAngle = (GMYAWRx.angle - yawZeroAngle) * 360 / 8192.0f;
 	NORMALIZE_ANGLE180(yawRealAngle);
 			
-	if(WorkState == NORMAL_STATE) 
-	{
-		yawRealAngle = -ZGyroModuleAngle;
-	}
-							
-	yawIntensity = ProcessYawPID(yawAngleTarget, yawRealAngle, -gYroZs);
-	
-	ControlRotate();
+	MINMAX(yawAngleTarget,-150,150);						
+	yawIntensity = ProcessYawPID(yawAngleTarget, yawRealAngle, (yawRealAngle-last_angel)/pulse_time );//-gYroZs
+	last_angel=yawRealAngle;
 }
 
 //控制云台pitch轴
 void ControlPitch(void)
 {
+	static float last_angel=pitch_zero;
+	const float pulse_time=1;
+	
 	uint16_t pitchZeroAngle = pitch_zero;
 				
 	pitchRealAngle = -(GMPITCHRx.angle - pitchZeroAngle) * 360 / 8192.0;
@@ -304,7 +218,8 @@ void ControlPitch(void)
 
 	MINMAX(pitchAngleTarget, -9.0f, 32);
 				
-	pitchIntensity = ProcessPitchPID(pitchAngleTarget,pitchRealAngle,-gYroXs);
+	pitchIntensity = ProcessPitchPID(pitchAngleTarget,pitchRealAngle,(pitchRealAngle-last_angel)/pulse_time);//-gYroXs
+	last_angel=pitchRealAngle;
 }
 
 //主控制循环
@@ -314,15 +229,13 @@ void controlLoop()
 	
 	if(WorkState == NORMAL_STATE )
 	{
-		//ControlYaw();
+		
+		ControlYaw();
 		ControlPitch();
 		
 		setGMMotor();
 		
 		ControlCMFL();
-		ControlCMFR();
-		ControlCMBL();
-		ControlCMBR();
 		
 		setCMMotor();
 		
@@ -356,17 +269,11 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 			{
 				if(rc_first_frame) WorkState = PREPARE_STATE;
 				HAL_UART_AbortReceive(&RC_UART);
-		    HAL_UART_Receive_DMA(&RC_UART, rc_data, 18);
+				HAL_UART_Receive_DMA(&RC_UART, rc_data, 18);
 				rc_cnt = 0;
 				rc_first_frame = 1;
 			}
 			rc_update = 0;
 		}
-	}
-	else if (htim->Instance == htim10.Instance)  //10ms，处理上位机数据，优先级不高
-	{
-		#ifdef DEBUG_MODE
-		zykProcessData();
-		#endif
 	}
 }
