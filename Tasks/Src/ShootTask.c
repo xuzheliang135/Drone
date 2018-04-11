@@ -92,7 +92,6 @@ void RemoteShootControl(RemoteSwitch_t *sw, uint8_t val)
 			{
 				ShootState = SHOOTING;
 				if(shootFlag==0){
-					shootFlag=1;
 					CMFLIntensity = 7000;
 				}
 			}
