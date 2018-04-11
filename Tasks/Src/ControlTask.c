@@ -235,11 +235,11 @@ void controlLoop()
 		
 		setGMMotor();
 		
-		ControlCMFL();
+//		ControlCMFL();
 		
 		setCMMotor();
 		
-		PlateMotorTask();
+//		PlateMotorTask();
 	}
 }
 
@@ -277,3 +277,10 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 		}
 	}
 }
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
+	if(GPIO_Pin&GPIO_PIN_0){
+		CMFLIntensity=0;
+	}
+	
+}
+//PF0口中断函数，单发控制

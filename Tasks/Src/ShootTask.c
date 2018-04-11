@@ -19,7 +19,8 @@ uint16_t remoteShootDelay = 500;
 static uint32_t RotateCNT = 0;	//长按连发计数
 static uint16_t CNT_1s = 75;		//用于避免四连发模式下两秒内连射8发过于密集的情况
 static uint16_t CNT_250ms = 18;	//???????????
-
+extern int16_t CMFLIntensity;
+uint16_t shootFlag=0;
 
 void InitUserTimer(void)
 {
@@ -45,6 +46,9 @@ void RemoteShootControl(RemoteSwitch_t *sw, uint8_t val)
 				ShootState = NOSHOOTING;
 				frictionRamp.ResetCounter(&frictionRamp);
 				FrictionWheelState = FRICTION_WHEEL_START_TURNNING;	 
+				
+				CMFLIntensity = 0;
+				shootFlag=0;
 			}				 		
 		}break;
 		case FRICTION_WHEEL_START_TURNNING:
@@ -55,6 +59,9 @@ void RemoteShootControl(RemoteSwitch_t *sw, uint8_t val)
 				SetFrictionWheelSpeed(1000);
 				FrictionWheelState = FRICTION_WHEEL_OFF;
 				frictionRamp.ResetCounter(&frictionRamp);
+				
+				CMFLIntensity = 0;
+				shootFlag=0;
 			}
 			else
 			{
@@ -77,10 +84,17 @@ void RemoteShootControl(RemoteSwitch_t *sw, uint8_t val)
 				SetFrictionWheelSpeed(1000); 
 				frictionRamp.ResetCounter(&frictionRamp);
 				ShootState = NOSHOOTING;
+				
+				CMFLIntensity = 0;
+				shootFlag=0;
 			}
 			else if(sw->switch_value_raw == 2)
 			{
 				ShootState = SHOOTING;
+				if(shootFlag==0){
+					shootFlag=1;
+					CMFLIntensity = 7000;
+				}
 			}
 			else
 			{
