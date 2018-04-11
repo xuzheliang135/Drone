@@ -52,7 +52,6 @@
 /* USER CODE END Includes */
 
 extern CAN_HandleTypeDef hcan1;
-extern CAN_HandleTypeDef hcan2;
 
 /* USER CODE BEGIN Private defines */
 
@@ -61,7 +60,6 @@ extern CAN_HandleTypeDef hcan2;
 extern void _Error_Handler(char *, int);
 
 void MX_CAN1_Init(void);
-void MX_CAN2_Init(void);
 
 /* USER CODE BEGIN Prototypes */
 
