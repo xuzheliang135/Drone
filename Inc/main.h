@@ -47,9 +47,6 @@
 
 /* Private define ------------------------------------------------------------*/
 
-#define SWITCH_Pin GPIO_PIN_0
-#define SWITCH_GPIO_Port GPIOF
-#define SWITCH_EXTI_IRQn EXTI0_IRQn
 #define NSS_Pin GPIO_PIN_6
 #define NSS_GPIO_Port GPIOF
 #define EncoderB_Pin GPIO_PIN_11
