@@ -3,7 +3,11 @@
 <title>Static Call Graph - [NT_Infantry\NT_Infantry.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image NT_Infantry\NT_Infantry.axf</H1><HR>
+<<<<<<< HEAD
 <BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Sat Apr 21 21:02:48 2018
+=======
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Sun Apr 01 19:09:41 2018
+>>>>>>> parent of 5f83272... 精简代码
 <BR><P>
 <H3>Maximum Stack Usage =        264 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -145,7 +149,11 @@ Global Symbols
 <P><STRONG><a name="[6e]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f427xx.o(.text)
 </UL>
+<<<<<<< HEAD
 <P><STRONG><a name="[100]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+=======
+<P><STRONG><a name="[fd]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+>>>>>>> parent of 5f83272... 精简代码
 
 <P><STRONG><a name="[73]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -155,6 +163,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[101]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
 <P><STRONG><a name="[102]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
@@ -164,6 +173,17 @@ Global Symbols
 <P><STRONG><a name="[104]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
 <P><STRONG><a name="[105]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+=======
+<P><STRONG><a name="[fe]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+
+<P><STRONG><a name="[ff]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+
+<P><STRONG><a name="[100]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+
+<P><STRONG><a name="[101]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+
+<P><STRONG><a name="[102]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+>>>>>>> parent of 5f83272... 精简代码
 
 <P><STRONG><a name="[a]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_stm32f427xx.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f427xx.o(RESET)
@@ -425,12 +445,10 @@ Global Symbols
 <LI> shoottask.o(.data)
 </UL>
 <P><STRONG><a name="[1]"></a>PID_Reset</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, pid_regulator.o(.text))
-<BR>[Address Reference Count : 2]<UL><LI> controltask.o(.data)
-<LI> platemotor.o(.data)
+<BR>[Address Reference Count : 1]<UL><LI> controltask.o(.data)
 </UL>
 <P><STRONG><a name="[0]"></a>PID_Calc</STRONG> (Thumb, 234 bytes, Stack size 0 bytes, pid_regulator.o(.text))
-<BR>[Address Reference Count : 2]<UL><LI> controltask.o(.data)
-<LI> platemotor.o(.data)
+<BR>[Address Reference Count : 1]<UL><LI> controltask.o(.data)
 </UL>
 <P><STRONG><a name="[75]"></a>__aeabi_uldivmod</STRONG> (Thumb, 98 bytes, Stack size 40 bytes, uldiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = __aeabi_uldivmod
@@ -438,10 +456,24 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
 </UL>
 
 <P><STRONG><a name="[106]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+=======
+<BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
+</UL>
+
+<P><STRONG><a name="[103]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+
+<P><STRONG><a name="[e9]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ProcessYawPID
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ProcessPitchPID
+</UL>
+
+<P><STRONG><a name="[104]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+>>>>>>> parent of 5f83272... 精简代码
 
 <P><STRONG><a name="[ea]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ProcessYawPID
@@ -455,7 +487,11 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ControlPitch
+=======
+<BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ControlCMFL
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 
 <P><STRONG><a name="[7a]"></a>__aeabi_i2d</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, dflti.o(.text))
@@ -463,7 +499,11 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ControlPitch
+=======
+<BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ControlCMFL
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 
 <P><STRONG><a name="[7b]"></a>__aeabi_d2f</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, d2f.o(.text))
@@ -471,7 +511,11 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_round
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ControlPitch
+=======
+<BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ControlCMFL
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 
 <P><STRONG><a name="[77]"></a>__aeabi_llsl</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, llshl.o(.text))
@@ -479,22 +523,42 @@ Global Symbols
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[108]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
+=======
+<P><STRONG><a name="[105]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
+>>>>>>> parent of 5f83272... 精简代码
 
 <P><STRONG><a name="[76]"></a>__aeabi_llsr</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, llushr.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[109]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
 
 <P><STRONG><a name="[10a]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, iusefp.o(.text), UNUSED)
+=======
+<P><STRONG><a name="[106]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
+
+<P><STRONG><a name="[79]"></a>__aeabi_lasr</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, llsshr.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+</UL>
+
+<P><STRONG><a name="[107]"></a>_ll_sshift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
+
+<P><STRONG><a name="[108]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, iusefp.o(.text), UNUSED)
+>>>>>>> parent of 5f83272... 精简代码
 
 <P><STRONG><a name="[7c]"></a>_float_round</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, fepilogue.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[10b]"></a>_float_epilogue</STRONG> (Thumb, 92 bytes, Stack size 4 bytes, fepilogue.o(.text), UNUSED)
+=======
+<P><STRONG><a name="[109]"></a>_float_epilogue</STRONG> (Thumb, 92 bytes, Stack size 4 bytes, fepilogue.o(.text), UNUSED)
+>>>>>>> parent of 5f83272... 精简代码
 
 <P><STRONG><a name="[7d]"></a>_double_round</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, depilogue.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = _double_round
@@ -519,11 +583,19 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[10c]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
 <P><STRONG><a name="[10d]"></a>__decompress</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
 
 <P><STRONG><a name="[10e]"></a>__decompress1</STRONG> (Thumb, 86 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
+=======
+<P><STRONG><a name="[10a]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+
+<P><STRONG><a name="[10b]"></a>__decompress</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
+
+<P><STRONG><a name="[10c]"></a>__decompress1</STRONG> (Thumb, 86 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
+>>>>>>> parent of 5f83272... 精简代码
 
 <P><STRONG><a name="[e]"></a>BusFault_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_it.o(i.BusFault_Handler))
 <BR><BR>[Calls]<UL><LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BusFault_Handler
@@ -546,6 +618,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f427xx.o(RESET)
 </UL>
+<<<<<<< HEAD
 <P><STRONG><a name="[fb]"></a>CMControlInit</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, controltask.o(i.CMControlInit))
 <BR><BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -557,6 +630,43 @@ Global Symbols
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ProcessPitchPID
+=======
+<P><STRONG><a name="[54]"></a>CAN2_RX0_IRQHandler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_it.o(i.CAN2_RX0_IRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = CAN2_RX0_IRQHandler &rArr; HAL_CAN_IRQHandler &rArr; CAN_Receive_IT &rArr; HAL_CAN_RxCpltCallback &rArr; HAL_CAN_Receive_IT
+</UL>
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_IRQHandler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f427xx.o(RESET)
+</UL>
+<P><STRONG><a name="[53]"></a>CAN2_TX_IRQHandler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_it.o(i.CAN2_TX_IRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = CAN2_TX_IRQHandler &rArr; HAL_CAN_IRQHandler &rArr; CAN_Receive_IT &rArr; HAL_CAN_RxCpltCallback &rArr; HAL_CAN_Receive_IT
+</UL>
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_IRQHandler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f427xx.o(RESET)
+</UL>
+<P><STRONG><a name="[fa]"></a>CMControlInit</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, controltask.o(i.CMControlInit))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = CMControlInit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[86]"></a>ControlCMFL</STRONG> (Thumb, 162 bytes, Stack size 32 bytes, controltask.o(i.ControlCMFL))
+<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = ControlCMFL &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
+</UL>
+<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
+</UL>
+<BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;controlLoop
+</UL>
+
+<P><STRONG><a name="[87]"></a>ControlPitch</STRONG> (Thumb, 146 bytes, Stack size 8 bytes, controltask.o(i.ControlPitch))
+<BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = ControlPitch &rArr; ProcessPitchPID &rArr; PID_PROCESS_Double
+</UL>
+<BR>[Calls]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ProcessPitchPID
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;controlLoop
 </UL>
@@ -600,6 +710,7 @@ Global Symbols
 <P><STRONG><a name="[11]"></a>DebugMon_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_it.o(i.DebugMon_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f427xx.o(RESET)
 </UL>
+<<<<<<< HEAD
 <P><STRONG><a name="[1e]"></a>EXTI4_IRQHandler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_it.o(i.EXTI4_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = EXTI4_IRQHandler &rArr; HAL_GPIO_EXTI_IRQHandler
 </UL>
@@ -608,6 +719,9 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f427xx.o(RESET)
 </UL>
 <P><STRONG><a name="[ee]"></a>GetRemoteSwitchAction</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, remotetask.o(i.GetRemoteSwitchAction))
+=======
+<P><STRONG><a name="[ed]"></a>GetRemoteSwitchAction</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, remotetask.o(i.GetRemoteSwitchAction))
+>>>>>>> parent of 5f83272... 精简代码
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = GetRemoteSwitchAction
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RemoteDataProcess
@@ -626,9 +740,15 @@ Global Symbols
 <P><STRONG><a name="[7f]"></a>HAL_CAN_IRQHandler</STRONG> (Thumb, 548 bytes, Stack size 24 bytes, stm32f4xx_hal_can.o(i.HAL_CAN_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = HAL_CAN_IRQHandler &rArr; CAN_Receive_IT &rArr; HAL_CAN_RxCpltCallback &rArr; HAL_CAN_Receive_IT
 </UL>
+<<<<<<< HEAD
 <BR>[Calls]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_TxCpltCallback
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_ErrorCallback
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN_Receive_IT
+=======
+<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_TxCpltCallback
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_ErrorCallback
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN_Receive_IT
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Called By]<UL><LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN1_TX_IRQHandler
 <LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN1_RX0_IRQHandler
@@ -640,7 +760,12 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_MspInit
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_CAN1_Init
+=======
+<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_CAN2_Init
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_CAN1_Init
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 
 <P><STRONG><a name="[8b]"></a>HAL_CAN_MspInit</STRONG> (Thumb, 92 bytes, Stack size 32 bytes, can.o(i.HAL_CAN_MspInit))
@@ -657,6 +782,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = HAL_CAN_Receive_IT
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitCanReception
+<<<<<<< HEAD
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_RxCpltCallback
 </UL>
 
@@ -665,10 +791,21 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_Receive_IT
+=======
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_RxCpltCallback
+</UL>
+
+<P><STRONG><a name="[85]"></a>HAL_CAN_RxCpltCallback</STRONG> (Thumb, 132 bytes, Stack size 8 bytes, cantask.o(i.HAL_CAN_RxCpltCallback))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = HAL_CAN_RxCpltCallback &rArr; HAL_CAN_Receive_IT
+</UL>
+<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_Receive_IT
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CAN_Receive_IT
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[ff]"></a>HAL_CAN_Transmit_IT</STRONG> (Thumb, 292 bytes, Stack size 16 bytes, stm32f4xx_hal_can.o(i.HAL_CAN_Transmit_IT))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = HAL_CAN_Transmit_IT
 </UL>
@@ -678,6 +815,17 @@ Global Symbols
 
 <P><STRONG><a name="[88]"></a>HAL_CAN_TxCpltCallback</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, cantask.o(i.HAL_CAN_TxCpltCallback))
 <BR><BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_IRQHandler
+=======
+<P><STRONG><a name="[fc]"></a>HAL_CAN_Transmit_IT</STRONG> (Thumb, 292 bytes, Stack size 16 bytes, stm32f4xx_hal_can.o(i.HAL_CAN_Transmit_IT))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = HAL_CAN_Transmit_IT
+</UL>
+<BR>[Called By]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setGMMotor
+<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setCMMotor
+</UL>
+
+<P><STRONG><a name="[8c]"></a>HAL_CAN_TxCpltCallback</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, cantask.o(i.HAL_CAN_TxCpltCallback))
+<BR><BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_IRQHandler
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 
 <P><STRONG><a name="[92]"></a>HAL_DMA_Abort</STRONG> (Thumb, 142 bytes, Stack size 24 bytes, stm32f4xx_hal_dma.o(i.HAL_DMA_Abort))
@@ -728,12 +876,17 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_EXTI_Callback
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI4_IRQHandler
+=======
+<BR>[Called By]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Receive_DMA
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 
 <P><STRONG><a name="[8d]"></a>HAL_GPIO_Init</STRONG> (Thumb, 408 bytes, Stack size 40 bytes, stm32f4xx_hal_gpio.o(i.HAL_GPIO_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = HAL_GPIO_Init
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_MspInit
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_MspInit
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_MspInit
@@ -756,6 +909,28 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[ef]"></a>HAL_IncTick</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f4xx_hal.o(i.HAL_IncTick))
+=======
+<BR>[Called By]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_MspInit
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_MspInit
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_MspPostInit
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
+<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
+</UL>
+
+<P><STRONG><a name="[db]"></a>HAL_GPIO_WritePin</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f4xx_hal_gpio.o(i.HAL_GPIO_WritePin))
+<BR><BR>[Called By]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
+</UL>
+
+<P><STRONG><a name="[90]"></a>HAL_GetTick</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_hal.o(i.HAL_GetTick))
+<BR><BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Abort
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Init
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_Init
+<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
+<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
+</UL>
+
+<P><STRONG><a name="[ee]"></a>HAL_IncTick</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f4xx_hal.o(i.HAL_IncTick))
+>>>>>>> parent of 5f83272... 精简代码
 <BR><BR>[Called By]<UL><LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 
@@ -789,6 +964,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[c3]"></a>HAL_NVIC_DisableIRQ</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, stm32f4xx_hal_cortex.o(i.HAL_NVIC_DisableIRQ))
+<<<<<<< HEAD
 <BR><BR>[Called By]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setGMMotor
 <LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setCMMotor
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
@@ -804,6 +980,22 @@ Global Symbols
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
 <LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 <LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_DMA_Init
+=======
+<BR><BR>[Called By]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setGMMotor
+<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setCMMotor
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[93]"></a>HAL_NVIC_EnableIRQ</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, stm32f4xx_hal_cortex.o(i.HAL_NVIC_EnableIRQ))
+<BR><BR>[Called By]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setGMMotor
+<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setCMMotor
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_MspInit
+<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_MspInit
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_DMA_Init
+>>>>>>> parent of 5f83272... 精简代码
 <LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -812,6 +1004,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_SetPriority
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_MspInit
 <LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_MspInit
@@ -820,6 +1013,15 @@ Global Symbols
 <LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 <LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_DMA_Init
 <LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+=======
+<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_MspInit
+<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_MspInit
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_MspInit
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_DMA_Init
+<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 
 <P><STRONG><a name="[9a]"></a>HAL_NVIC_SetPriorityGrouping</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f4xx_hal_cortex.o(i.HAL_NVIC_SetPriorityGrouping))
@@ -834,6 +1036,7 @@ Global Symbols
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
@@ -846,6 +1049,20 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[f6]"></a>HAL_RCC_GetPCLK2Freq</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, stm32f4xx_hal_rcc.o(i.HAL_RCC_GetPCLK2Freq))
+=======
+<BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+</UL>
+
+<P><STRONG><a name="[f0]"></a>HAL_RCC_GetHCLKFreq</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_hal_rcc.o(i.HAL_RCC_GetHCLKFreq))
+<BR><BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+</UL>
+
+<P><STRONG><a name="[f6]"></a>HAL_RCC_GetPCLK1Freq</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, stm32f4xx_hal_rcc.o(i.HAL_RCC_GetPCLK1Freq))
+<BR><BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
+</UL>
+
+<P><STRONG><a name="[f5]"></a>HAL_RCC_GetPCLK2Freq</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, stm32f4xx_hal_rcc.o(i.HAL_RCC_GetPCLK2Freq))
+>>>>>>> parent of 5f83272... 精简代码
 <BR><BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
 </UL>
 
@@ -862,7 +1079,11 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+=======
+<BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 
 <P><STRONG><a name="[a2]"></a>HAL_SPI_Init</STRONG> (Thumb, 128 bytes, Stack size 16 bytes, stm32f4xx_hal_spi.o(i.HAL_SPI_Init))
@@ -870,7 +1091,11 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_MspInit
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI5_Init
+=======
+<BR>[Called By]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI5_Init
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 
 <P><STRONG><a name="[a3]"></a>HAL_SPI_MspInit</STRONG> (Thumb, 64 bytes, Stack size 32 bytes, spi.o(i.HAL_SPI_MspInit))
@@ -881,8 +1106,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_Init
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[f2]"></a>HAL_SYSTICK_CLKSourceConfig</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f4xx_hal_cortex.o(i.HAL_SYSTICK_CLKSourceConfig))
 <BR><BR>[Called By]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+=======
+<P><STRONG><a name="[f1]"></a>HAL_SYSTICK_CLKSourceConfig</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f4xx_hal_cortex.o(i.HAL_SYSTICK_CLKSourceConfig))
+<BR><BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 
 <P><STRONG><a name="[a5]"></a>HAL_SYSTICK_Callback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_hal_cortex.o(i.HAL_SYSTICK_Callback))
@@ -894,8 +1124,13 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_SetPriority
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
 <LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+=======
+<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
+<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 
 <P><STRONG><a name="[a4]"></a>HAL_SYSTICK_IRQHandler</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, stm32f4xx_hal_cortex.o(i.HAL_SYSTICK_IRQHandler))
@@ -906,6 +1141,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[b7]"></a>HAL_TIMEx_BreakCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_hal_tim_ex.o(i.HAL_TIMEx_BreakCallback))
 <BR><BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IRQHandler
 </UL>
@@ -921,6 +1157,21 @@ Global Symbols
 <LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM6_Init
 <LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM5_Init
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM4_Init
+=======
+<P><STRONG><a name="[b6]"></a>HAL_TIMEx_BreakCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_hal_tim_ex.o(i.HAL_TIMEx_BreakCallback))
+<BR><BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IRQHandler
+</UL>
+
+<P><STRONG><a name="[b8]"></a>HAL_TIMEx_CommutationCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_hal_tim_ex.o(i.HAL_TIMEx_CommutationCallback))
+<BR><BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IRQHandler
+</UL>
+
+<P><STRONG><a name="[e0]"></a>HAL_TIMEx_MasterConfigSynchronization</STRONG> (Thumb, 80 bytes, Stack size 12 bytes, stm32f4xx_hal_tim_ex.o(i.HAL_TIMEx_MasterConfigSynchronization))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = HAL_TIMEx_MasterConfigSynchronization
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM7_Init
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM6_Init
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 
 <P><STRONG><a name="[a6]"></a>HAL_TIM_Base_Init</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, stm32f4xx_hal_tim.o(i.HAL_TIM_Base_Init))
@@ -929,6 +1180,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_SetConfig
 <LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_MspInit
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM7_Init
 <LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM6_Init
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM4_Init
@@ -937,6 +1189,15 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[a7]"></a>HAL_TIM_Base_MspInit</STRONG> (Thumb, 170 bytes, Stack size 8 bytes, tim.o(i.HAL_TIM_Base_MspInit))
+=======
+<BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM7_Init
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM6_Init
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM12_Init
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM10_Init
+</UL>
+
+<P><STRONG><a name="[aa]"></a>HAL_TIM_Base_MspInit</STRONG> (Thumb, 148 bytes, Stack size 8 bytes, tim.o(i.HAL_TIM_Base_MspInit))
+>>>>>>> parent of 5f83272... 精简代码
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = HAL_TIM_Base_MspInit &rArr; HAL_NVIC_SetPriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
@@ -945,7 +1206,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Init
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[fc]"></a>HAL_TIM_Base_Start_IT</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f4xx_hal_tim.o(i.HAL_TIM_Base_Start_IT))
+=======
+<P><STRONG><a name="[fb]"></a>HAL_TIM_Base_Start_IT</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f4xx_hal_tim.o(i.HAL_TIM_Base_Start_IT))
+>>>>>>> parent of 5f83272... 精简代码
 <BR><BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -957,6 +1222,7 @@ Global Symbols
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ITRx_SetConfig
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ETR_SetConfig
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM4_Init
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM12_Init
 </UL>
@@ -996,17 +1262,42 @@ Global Symbols
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_PulseFinishedCallback
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_OC_DelayElapsedCallback
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IC_CaptureCallback
+=======
+<BR>[Called By]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM12_Init
+</UL>
+
+<P><STRONG><a name="[b2]"></a>HAL_TIM_IC_CaptureCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_hal_tim.o(i.HAL_TIM_IC_CaptureCallback))
+<BR><BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IRQHandler
+</UL>
+
+<P><STRONG><a name="[b1]"></a>HAL_TIM_IRQHandler</STRONG> (Thumb, 358 bytes, Stack size 16 bytes, stm32f4xx_hal_tim.o(i.HAL_TIM_IRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = HAL_TIM_IRQHandler &rArr; HAL_TIM_PeriodElapsedCallback &rArr; controlLoop &rArr; ControlYaw &rArr; ProcessYawPID &rArr; PID_PROCESS_Double
+</UL>
+<BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_CommutationCallback
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_BreakCallback
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_TriggerCallback
+<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_PulseFinishedCallback
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_OC_DelayElapsedCallback
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IC_CaptureCallback
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM7_IRQHandler
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM6_DAC_IRQHandler
 <LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM1_UP_TIM10_IRQHandler
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[ba]"></a>HAL_TIM_MspPostInit</STRONG> (Thumb, 126 bytes, Stack size 40 bytes, tim.o(i.HAL_TIM_MspPostInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = HAL_TIM_MspPostInit &rArr; HAL_GPIO_Init
+=======
+<P><STRONG><a name="[b9]"></a>HAL_TIM_MspPostInit</STRONG> (Thumb, 44 bytes, Stack size 24 bytes, tim.o(i.HAL_TIM_MspPostInit))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = HAL_TIM_MspPostInit &rArr; HAL_GPIO_Init
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM5_Init
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM4_Init
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM12_Init
@@ -1062,12 +1353,59 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[b6]"></a>HAL_TIM_PeriodElapsedCallback</STRONG> (Thumb, 134 bytes, Stack size 24 bytes, controltask.o(i.HAL_TIM_PeriodElapsedCallback))
+=======
+<BR>[Called By]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM12_Init
+</UL>
+
+<P><STRONG><a name="[b3]"></a>HAL_TIM_OC_DelayElapsedCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_hal_tim.o(i.HAL_TIM_OC_DelayElapsedCallback))
+<BR><BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IRQHandler
+</UL>
+
+<P><STRONG><a name="[ba]"></a>HAL_TIM_PWM_ConfigChannel</STRONG> (Thumb, 208 bytes, Stack size 16 bytes, stm32f4xx_hal_tim.o(i.HAL_TIM_PWM_ConfigChannel))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = HAL_TIM_PWM_ConfigChannel &rArr; TIM_OC2_SetConfig
+</UL>
+<BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC2_SetConfig
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC4_SetConfig
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC3_SetConfig
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC1_SetConfig
+</UL>
+<BR>[Called By]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM12_Init
+</UL>
+
+<P><STRONG><a name="[bf]"></a>HAL_TIM_PWM_Init</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, stm32f4xx_hal_tim.o(i.HAL_TIM_PWM_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = HAL_TIM_PWM_Init &rArr; TIM_Base_SetConfig
+</UL>
+<BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_SetConfig
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_MspInit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM12_Init
+</UL>
+
+<P><STRONG><a name="[c0]"></a>HAL_TIM_PWM_MspInit</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_hal_tim.o(i.HAL_TIM_PWM_MspInit))
+<BR><BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Init
+</UL>
+
+<P><STRONG><a name="[b4]"></a>HAL_TIM_PWM_PulseFinishedCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_hal_tim.o(i.HAL_TIM_PWM_PulseFinishedCallback))
+<BR><BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IRQHandler
+</UL>
+
+<P><STRONG><a name="[c1]"></a>HAL_TIM_PWM_Start</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, stm32f4xx_hal_tim.o(i.HAL_TIM_PWM_Start))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = HAL_TIM_PWM_Start &rArr; TIM_CCxChannelCmd
+</UL>
+<BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_CCxChannelCmd
+</UL>
+<BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitUserTimer
+</UL>
+
+<P><STRONG><a name="[b5]"></a>HAL_TIM_PeriodElapsedCallback</STRONG> (Thumb, 134 bytes, Stack size 24 bytes, controltask.o(i.HAL_TIM_PeriodElapsedCallback))
+>>>>>>> parent of 5f83272... 精简代码
 <BR><BR>[Stack]<UL><LI>Max Depth = 248<LI>Call Chain = HAL_TIM_PeriodElapsedCallback &rArr; controlLoop &rArr; ControlYaw &rArr; ProcessYawPID &rArr; PID_PROCESS_Double
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Receive_DMA
 <LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_AbortReceive
 <LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RemoteDataProcess
 <LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;controlLoop
+<<<<<<< HEAD
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
 <LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_DisableIRQ
 </UL>
@@ -1076,6 +1414,16 @@ Global Symbols
 
 <P><STRONG><a name="[b8]"></a>HAL_TIM_TriggerCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_hal_tim.o(i.HAL_TIM_TriggerCallback))
 <BR><BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IRQHandler
+=======
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_DisableIRQ
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IRQHandler
+</UL>
+
+<P><STRONG><a name="[b7]"></a>HAL_TIM_TriggerCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_hal_tim.o(i.HAL_TIM_TriggerCallback))
+<BR><BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IRQHandler
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 
 <P><STRONG><a name="[c5]"></a>HAL_UART_AbortReceive</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, stm32f4xx_hal_uart.o(i.HAL_UART_AbortReceive))
@@ -1083,7 +1431,11 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Abort
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
+=======
+<BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 
 <P><STRONG><a name="[cc]"></a>HAL_UART_ErrorCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_hal_uart.o(i.HAL_UART_ErrorCallback))
@@ -1114,20 +1466,35 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART6_UART_Init
 <LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART3_UART_Init
 <LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART2_UART_Init
 <LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART1_UART_Init
+=======
+<BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART6_UART_Init
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART3_UART_Init
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART2_UART_Init
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART1_UART_Init
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 
 <P><STRONG><a name="[d0]"></a>HAL_UART_MspInit</STRONG> (Thumb, 574 bytes, Stack size 64 bytes, usart.o(i.HAL_UART_MspInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = HAL_UART_MspInit &rArr; HAL_GPIO_Init
 </UL>
+<<<<<<< HEAD
 <BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Init
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
+=======
+<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Init
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
 </UL>
@@ -1138,15 +1505,26 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_DMA_Start_IT
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitRemoteControl
+<<<<<<< HEAD
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
 </UL>
 
 <P><STRONG><a name="[f4]"></a>HAL_UART_RxCpltCallback</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, remotetask.o(i.HAL_UART_RxCpltCallback))
+=======
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
+</UL>
+
+<P><STRONG><a name="[f3]"></a>HAL_UART_RxCpltCallback</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, remotetask.o(i.HAL_UART_RxCpltCallback))
+>>>>>>> parent of 5f83272... 精简代码
 <BR><BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Receive_IT
 <LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_DMAReceiveCplt
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[f5]"></a>HAL_UART_RxHalfCpltCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_hal_uart.o(i.HAL_UART_RxHalfCpltCallback))
+=======
+<P><STRONG><a name="[f4]"></a>HAL_UART_RxHalfCpltCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_hal_uart.o(i.HAL_UART_RxHalfCpltCallback))
+>>>>>>> parent of 5f83272... 精简代码
 <BR><BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_DMARxHalfCplt
 </UL>
 
@@ -1161,22 +1539,38 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f427xx.o(RESET)
 </UL>
+<<<<<<< HEAD
 <P><STRONG><a name="[d2]"></a>InitCanReception</STRONG> (Thumb, 70 bytes, Stack size 48 bytes, cantask.o(i.InitCanReception))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = InitCanReception &rArr; HAL_CAN_Receive_IT
 </UL>
 <BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_Receive_IT
+=======
+<P><STRONG><a name="[d2]"></a>InitCanReception</STRONG> (Thumb, 78 bytes, Stack size 48 bytes, cantask.o(i.InitCanReception))
+<BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = InitCanReception &rArr; HAL_CAN_Receive_IT
+</UL>
+<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_Receive_IT
+>>>>>>> parent of 5f83272... 精简代码
 <LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_ConfigFilter
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[d4]"></a>InitRemoteControl</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, remotetask.o(i.InitRemoteControl))
+=======
+<P><STRONG><a name="[d4]"></a>InitRemoteControl</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, remotetask.o(i.InitRemoteControl))
+>>>>>>> parent of 5f83272... 精简代码
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = InitRemoteControl &rArr; HAL_UART_Receive_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Receive_DMA
 <LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RemoteTaskInit
+<<<<<<< HEAD
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
+=======
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1184,21 +1578,45 @@ Global Symbols
 <P><STRONG><a name="[d6]"></a>InitUserTimer</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, shoottask.o(i.InitUserTimer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = InitUserTimer &rArr; HAL_TIM_PWM_Start &rArr; TIM_CCxChannelCmd
 </UL>
+<<<<<<< HEAD
 <BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Start
+=======
+<BR>[Calls]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Start
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[d7]"></a>MX_CAN1_Init</STRONG> (Thumb, 64 bytes, Stack size 8 bytes, can.o(i.MX_CAN1_Init))
+<<<<<<< HEAD
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = MX_CAN1_Init &rArr; HAL_CAN_Init &rArr; HAL_CAN_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_Init
+=======
+<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = MX_CAN1_Init &rArr; HAL_CAN_Init &rArr; HAL_CAN_MspInit &rArr; HAL_GPIO_Init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_Init
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[d8]"></a>MX_DMA_Init</STRONG> (Thumb, 104 bytes, Stack size 8 bytes, dma.o(i.MX_DMA_Init))
+=======
+<P><STRONG><a name="[d8]"></a>MX_CAN2_Init</STRONG> (Thumb, 64 bytes, Stack size 8 bytes, can.o(i.MX_CAN2_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = MX_CAN2_Init &rArr; HAL_CAN_Init &rArr; HAL_CAN_MspInit &rArr; HAL_GPIO_Init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_Init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[d9]"></a>MX_DMA_Init</STRONG> (Thumb, 104 bytes, Stack size 8 bytes, dma.o(i.MX_DMA_Init))
+>>>>>>> parent of 5f83272... 精简代码
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = MX_DMA_Init &rArr; HAL_NVIC_SetPriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
@@ -1207,6 +1625,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[d9]"></a>MX_GPIO_Init</STRONG> (Thumb, 260 bytes, Stack size 56 bytes, gpio.o(i.MX_GPIO_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = MX_GPIO_Init &rArr; HAL_GPIO_Init
 </UL>
@@ -1214,19 +1633,35 @@ Global Symbols
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
+=======
+<P><STRONG><a name="[da]"></a>MX_GPIO_Init</STRONG> (Thumb, 172 bytes, Stack size 48 bytes, gpio.o(i.MX_GPIO_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = MX_GPIO_Init &rArr; HAL_GPIO_Init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[db]"></a>MX_SPI5_Init</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, spi.o(i.MX_SPI5_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = MX_SPI5_Init &rArr; HAL_SPI_Init &rArr; HAL_SPI_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_Init
+=======
+<P><STRONG><a name="[dc]"></a>MX_SPI5_Init</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, spi.o(i.MX_SPI5_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = MX_SPI5_Init &rArr; HAL_SPI_Init &rArr; HAL_SPI_MspInit &rArr; HAL_GPIO_Init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_Init
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[dc]"></a>MX_TIM10_Init</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, tim.o(i.MX_TIM10_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = MX_TIM10_Init &rArr; HAL_TIM_Base_Init &rArr; HAL_TIM_Base_MspInit &rArr; HAL_NVIC_SetPriority
 </UL>
@@ -1245,10 +1680,18 @@ Global Symbols
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_ConfigClockSource
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Init
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_MspPostInit
+=======
+<P><STRONG><a name="[dd]"></a>MX_TIM10_Init</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, tim.o(i.MX_TIM10_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = MX_TIM10_Init &rArr; HAL_TIM_Base_Init &rArr; HAL_TIM_Base_MspInit &rArr; HAL_NVIC_SetPriority
+</UL>
+<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Init
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[de]"></a>MX_TIM4_Init</STRONG> (Thumb, 202 bytes, Stack size 64 bytes, tim.o(i.MX_TIM4_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = MX_TIM4_Init &rArr; HAL_TIM_PWM_Init &rArr; HAL_TIM_PWM_MspInit &rArr; HAL_GPIO_Init
 </UL>
@@ -1259,10 +1702,22 @@ Global Symbols
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_ConfigClockSource
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Init
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_MspPostInit
+=======
+<P><STRONG><a name="[de]"></a>MX_TIM12_Init</STRONG> (Thumb, 144 bytes, Stack size 56 bytes, tim.o(i.MX_TIM12_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = MX_TIM12_Init &rArr; HAL_TIM_MspPostInit &rArr; HAL_GPIO_Init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Init
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_ConfigChannel
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_ConfigClockSource
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Init
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_MspPostInit
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[e0]"></a>MX_TIM5_Init</STRONG> (Thumb, 142 bytes, Stack size 80 bytes, tim.o(i.MX_TIM5_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = MX_TIM5_Init &rArr; HAL_TIM_PWM_Init &rArr; HAL_TIM_PWM_MspInit &rArr; HAL_GPIO_Init
 </UL>
@@ -1282,52 +1737,101 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_MasterConfigSynchronization
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Init
+=======
+<P><STRONG><a name="[df]"></a>MX_TIM6_Init</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, tim.o(i.MX_TIM6_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = MX_TIM6_Init &rArr; HAL_TIM_Base_Init &rArr; HAL_TIM_Base_MspInit &rArr; HAL_NVIC_SetPriority
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_MasterConfigSynchronization
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Init
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[e2]"></a>MX_TIM7_Init</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, tim.o(i.MX_TIM7_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = MX_TIM7_Init &rArr; HAL_TIM_Base_Init &rArr; HAL_TIM_Base_MspInit &rArr; HAL_NVIC_SetPriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_MasterConfigSynchronization
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Init
+=======
+<P><STRONG><a name="[e1]"></a>MX_TIM7_Init</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, tim.o(i.MX_TIM7_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = MX_TIM7_Init &rArr; HAL_TIM_Base_Init &rArr; HAL_TIM_Base_MspInit &rArr; HAL_NVIC_SetPriority
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_MasterConfigSynchronization
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Init
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[e3]"></a>MX_USART1_UART_Init</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, usart.o(i.MX_USART1_UART_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = MX_USART1_UART_Init &rArr; HAL_UART_Init &rArr; HAL_UART_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
+=======
+<P><STRONG><a name="[e2]"></a>MX_USART1_UART_Init</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, usart.o(i.MX_USART1_UART_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = MX_USART1_UART_Init &rArr; HAL_UART_Init &rArr; HAL_UART_MspInit &rArr; HAL_GPIO_Init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[e4]"></a>MX_USART2_UART_Init</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, usart.o(i.MX_USART2_UART_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = MX_USART2_UART_Init &rArr; HAL_UART_Init &rArr; HAL_UART_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
+=======
+<P><STRONG><a name="[e3]"></a>MX_USART2_UART_Init</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, usart.o(i.MX_USART2_UART_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = MX_USART2_UART_Init &rArr; HAL_UART_Init &rArr; HAL_UART_MspInit &rArr; HAL_GPIO_Init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[e5]"></a>MX_USART3_UART_Init</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, usart.o(i.MX_USART3_UART_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = MX_USART3_UART_Init &rArr; HAL_UART_Init &rArr; HAL_UART_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
+=======
+<P><STRONG><a name="[e4]"></a>MX_USART3_UART_Init</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, usart.o(i.MX_USART3_UART_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = MX_USART3_UART_Init &rArr; HAL_UART_Init &rArr; HAL_UART_MspInit &rArr; HAL_GPIO_Init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[e6]"></a>MX_USART6_UART_Init</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, usart.o(i.MX_USART6_UART_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = MX_USART6_UART_Init &rArr; HAL_UART_Init &rArr; HAL_UART_MspInit &rArr; HAL_GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
+=======
+<P><STRONG><a name="[e5]"></a>MX_USART6_UART_Init</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, usart.o(i.MX_USART6_UART_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = MX_USART6_UART_Init &rArr; HAL_UART_Init &rArr; HAL_UART_MspInit &rArr; HAL_GPIO_Init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1339,26 +1843,46 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f427xx.o(RESET)
 </UL>
+<<<<<<< HEAD
 <P><STRONG><a name="[e7]"></a>MouseKeyControlProcess</STRONG> (Thumb, 334 bytes, Stack size 24 bytes, remotetask.o(i.MouseKeyControlProcess))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = MouseKeyControlProcess &rArr; MouseShootControl
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MouseShootControl
+=======
+<P><STRONG><a name="[e6]"></a>MouseKeyControlProcess</STRONG> (Thumb, 334 bytes, Stack size 24 bytes, remotetask.o(i.MouseKeyControlProcess))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = MouseKeyControlProcess &rArr; MouseShootControl
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MouseShootControl
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RemoteDataProcess
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[e8]"></a>MouseShootControl</STRONG> (Thumb, 244 bytes, Stack size 24 bytes, shoottask.o(i.MouseShootControl))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = MouseShootControl
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetFrictionWheelSpeed
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MouseKeyControlProcess
+=======
+<P><STRONG><a name="[e7]"></a>MouseShootControl</STRONG> (Thumb, 244 bytes, Stack size 24 bytes, shoottask.o(i.MouseShootControl))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = MouseShootControl
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetFrictionWheelSpeed
+</UL>
+<BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MouseKeyControlProcess
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 
 <P><STRONG><a name="[b]"></a>NMI_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_it.o(i.NMI_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f427xx.o(RESET)
 </UL>
+<<<<<<< HEAD
 <P><STRONG><a name="[eb]"></a>PID_PROCESS_Double</STRONG> (Thumb, 72 bytes, Stack size 48 bytes, pid_regulator.o(i.PID_PROCESS_Double))
+=======
+<P><STRONG><a name="[ea]"></a>PID_PROCESS_Double</STRONG> (Thumb, 72 bytes, Stack size 48 bytes, pid_regulator.o(i.PID_PROCESS_Double))
+>>>>>>> parent of 5f83272... 精简代码
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = PID_PROCESS_Double
 </UL>
 <BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ProcessYawPID
@@ -1368,11 +1892,19 @@ Global Symbols
 <P><STRONG><a name="[12]"></a>PendSV_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_it.o(i.PendSV_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f427xx.o(RESET)
 </UL>
+<<<<<<< HEAD
 <P><STRONG><a name="[83]"></a>ProcessPitchPID</STRONG> (Thumb, 70 bytes, Stack size 160 bytes, pid_regulator.o(i.ProcessPitchPID))
 <BR><BR>[Stack]<UL><LI>Max Depth = 208<LI>Call Chain = ProcessPitchPID &rArr; PID_PROCESS_Double
 </UL>
 <BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_PROCESS_Double
 <LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+=======
+<P><STRONG><a name="[88]"></a>ProcessPitchPID</STRONG> (Thumb, 70 bytes, Stack size 160 bytes, pid_regulator.o(i.ProcessPitchPID))
+<BR><BR>[Stack]<UL><LI>Max Depth = 208<LI>Call Chain = ProcessPitchPID &rArr; PID_PROCESS_Double
+</UL>
+<BR>[Calls]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_PROCESS_Double
+<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ControlPitch
 </UL>
@@ -1380,16 +1912,28 @@ Global Symbols
 <P><STRONG><a name="[85]"></a>ProcessYawPID</STRONG> (Thumb, 70 bytes, Stack size 160 bytes, pid_regulator.o(i.ProcessYawPID))
 <BR><BR>[Stack]<UL><LI>Max Depth = 208<LI>Call Chain = ProcessYawPID &rArr; PID_PROCESS_Double
 </UL>
+<<<<<<< HEAD
 <BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_PROCESS_Double
 <LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+=======
+<BR>[Calls]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PID_PROCESS_Double
+<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ControlYaw
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[ec]"></a>RemoteControlProcess</STRONG> (Thumb, 158 bytes, Stack size 0 bytes, remotetask.o(i.RemoteControlProcess))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = RemoteControlProcess &rArr; RemoteShootControl
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RemoteShootControl
+=======
+<P><STRONG><a name="[eb]"></a>RemoteControlProcess</STRONG> (Thumb, 158 bytes, Stack size 0 bytes, remotetask.o(i.RemoteControlProcess))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = RemoteControlProcess &rArr; RemoteShootControl
+</UL>
+<BR>[Calls]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RemoteShootControl
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RemoteDataProcess
 </UL>
@@ -1397,6 +1941,7 @@ Global Symbols
 <P><STRONG><a name="[c7]"></a>RemoteDataProcess</STRONG> (Thumb, 194 bytes, Stack size 8 bytes, remotetask.o(i.RemoteDataProcess))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = RemoteDataProcess &rArr; MouseKeyControlProcess &rArr; MouseShootControl
 </UL>
+<<<<<<< HEAD
 <BR>[Calls]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RemoteControlProcess
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MouseKeyControlProcess
 <LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetRemoteSwitchAction
@@ -1410,26 +1955,52 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetFrictionWheelSpeed
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RemoteControlProcess
+=======
+<BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RemoteControlProcess
+<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MouseKeyControlProcess
+<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetRemoteSwitchAction
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
+</UL>
+
+<P><STRONG><a name="[ec]"></a>RemoteShootControl</STRONG> (Thumb, 170 bytes, Stack size 24 bytes, shoottask.o(i.RemoteShootControl))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = RemoteShootControl
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetFrictionWheelSpeed
+</UL>
+<BR>[Called By]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RemoteControlProcess
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 
 <P><STRONG><a name="[d5]"></a>RemoteTaskInit</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, remotetask.o(i.RemoteTaskInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = RemoteTaskInit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitRemoteControl
+<<<<<<< HEAD
 <LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WorkStateFSM
+=======
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WorkStateFSM
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 
 <P><STRONG><a name="[10]"></a>SVC_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f4xx_it.o(i.SVC_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f427xx.o(RESET)
 </UL>
+<<<<<<< HEAD
 <P><STRONG><a name="[e9]"></a>SetFrictionWheelSpeed</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, shoottask.o(i.SetFrictionWheelSpeed))
 <BR><BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RemoteShootControl
 <LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MouseShootControl
+=======
+<P><STRONG><a name="[e8]"></a>SetFrictionWheelSpeed</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, shoottask.o(i.SetFrictionWheelSpeed))
+<BR><BR>[Called By]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RemoteShootControl
+<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MouseShootControl
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 
 <P><STRONG><a name="[13]"></a>SysTick_Handler</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, stm32f4xx_it.o(i.SysTick_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = SysTick_Handler &rArr; HAL_SYSTICK_IRQHandler
 </UL>
+<<<<<<< HEAD
 <BR>[Calls]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_IncTick
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_IRQHandler
 </UL>
@@ -1444,6 +2015,22 @@ Global Symbols
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
 <LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetHCLKFreq
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
+=======
+<BR>[Calls]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_IncTick
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_IRQHandler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f427xx.o(RESET)
+</UL>
+<P><STRONG><a name="[ef]"></a>SystemClock_Config</STRONG> (Thumb, 150 bytes, Stack size 88 bytes, main.o(i.SystemClock_Config))
+<BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = SystemClock_Config &rArr; HAL_RCC_ClockConfig &rArr; HAL_RCC_GetSysClockFreq &rArr; __aeabi_uldivmod
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_Config
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SYSTICK_CLKSourceConfig
+<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
+<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetHCLKFreq
+<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1454,27 +2041,40 @@ Global Symbols
 <P><STRONG><a name="[2d]"></a>TIM1_UP_TIM10_IRQHandler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_it.o(i.TIM1_UP_TIM10_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = TIM1_UP_TIM10_IRQHandler &rArr; HAL_TIM_IRQHandler &rArr; HAL_TIM_PeriodElapsedCallback &rArr; controlLoop &rArr; ControlYaw &rArr; ProcessYawPID &rArr; PID_PROCESS_Double
 </UL>
+<<<<<<< HEAD
 <BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IRQHandler
+=======
+<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IRQHandler
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f427xx.o(RESET)
 </UL>
 <P><STRONG><a name="[4a]"></a>TIM6_DAC_IRQHandler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_it.o(i.TIM6_DAC_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = TIM6_DAC_IRQHandler &rArr; HAL_TIM_IRQHandler &rArr; HAL_TIM_PeriodElapsedCallback &rArr; controlLoop &rArr; ControlYaw &rArr; ProcessYawPID &rArr; PID_PROCESS_Double
 </UL>
+<<<<<<< HEAD
 <BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IRQHandler
+=======
+<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IRQHandler
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f427xx.o(RESET)
 </UL>
 <P><STRONG><a name="[4b]"></a>TIM7_IRQHandler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_it.o(i.TIM7_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = TIM7_IRQHandler &rArr; HAL_TIM_IRQHandler &rArr; HAL_TIM_PeriodElapsedCallback &rArr; controlLoop &rArr; ControlYaw &rArr; ProcessYawPID &rArr; PID_PROCESS_Double
 </UL>
+<<<<<<< HEAD
 <BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IRQHandler
+=======
+<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IRQHandler
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f427xx.o(RESET)
 </UL>
 <P><STRONG><a name="[a8]"></a>TIM_Base_SetConfig</STRONG> (Thumb, 148 bytes, Stack size 20 bytes, stm32f4xx_hal_tim.o(i.TIM_Base_SetConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = TIM_Base_SetConfig
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Init
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Encoder_Init
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Init
@@ -1491,6 +2091,22 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = TIM_OC2_SetConfig
 </UL>
 <BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_ConfigChannel
+=======
+<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Init
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Init
+</UL>
+
+<P><STRONG><a name="[c2]"></a>TIM_CCxChannelCmd</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, stm32f4xx_hal_tim.o(i.TIM_CCxChannelCmd))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = TIM_CCxChannelCmd
+</UL>
+<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Start
+</UL>
+
+<P><STRONG><a name="[bc]"></a>TIM_OC2_SetConfig</STRONG> (Thumb, 90 bytes, Stack size 12 bytes, stm32f4xx_hal_tim.o(i.TIM_OC2_SetConfig))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = TIM_OC2_SetConfig
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_ConfigChannel
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 
 <P><STRONG><a name="[39]"></a>USART1_IRQHandler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_it.o(i.USART1_IRQHandler))
@@ -1528,7 +2144,11 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f427xx.o(RESET)
 </UL>
+<<<<<<< HEAD
 <P><STRONG><a name="[f8]"></a>WorkStateFSM</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, controltask.o(i.WorkStateFSM))
+=======
+<P><STRONG><a name="[f7]"></a>WorkStateFSM</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, controltask.o(i.WorkStateFSM))
+>>>>>>> parent of 5f83272... 精简代码
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = WorkStateFSM &rArr; RemoteTaskInit
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RemoteTaskInit
@@ -1540,6 +2160,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitRemoteControl
+<<<<<<< HEAD
 <LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setGMMotor
 <LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setCMMotor
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
@@ -1576,6 +2197,44 @@ Global Symbols
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ControlPitch
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
+=======
+<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setGMMotor
+<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setCMMotor
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitCanReception
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_RxCpltCallback
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART6_UART_Init
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART3_UART_Init
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART2_UART_Init
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART1_UART_Init
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM7_Init
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM6_Init
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM12_Init
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM10_Init
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI5_Init
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_CAN2_Init
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_CAN1_Init
+</UL>
+
+<P><STRONG><a name="[10d]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+
+<P><STRONG><a name="[10e]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+
+<P><STRONG><a name="[10f]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+
+<P><STRONG><a name="[c4]"></a>controlLoop</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, controltask.o(i.controlLoop))
+<BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = controlLoop &rArr; ControlYaw &rArr; ProcessYawPID &rArr; PID_PROCESS_Double
+</UL>
+<BR>[Calls]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setGMMotor
+<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setCMMotor
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WorkStateFSM
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ControlYaw
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ControlPitch
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ControlCMFL
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 
 <P><STRONG><a name="[2]"></a>fw_PID_Calc</STRONG> (Thumb, 286 bytes, Stack size 0 bytes, pid_regulator.o(i.fw_PID_Calc))
@@ -1590,11 +2249,16 @@ Global Symbols
 <LI> controltask.o(.data)
 <LI> controltask.o(.data)
 </UL>
+<<<<<<< HEAD
 <P><STRONG><a name="[6c]"></a>main</STRONG> (Thumb, 206 bytes, Stack size 0 bytes, main.o(i.main))
+=======
+<P><STRONG><a name="[6c]"></a>main</STRONG> (Thumb, 198 bytes, Stack size 0 bytes, main.o(i.main))
+>>>>>>> parent of 5f83272... 精简代码
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = main &rArr; SystemClock_Config &rArr; HAL_RCC_ClockConfig &rArr; HAL_RCC_GetSysClockFreq &rArr; __aeabi_uldivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitUserTimer
 <LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitRemoteControl
+<<<<<<< HEAD
 <LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMControlInit
 <LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitCanReception
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
@@ -1636,11 +2300,43 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
 <LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_Transmit_IT
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
+=======
+<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMControlInit
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitCanReception
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Start_IT
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_DisableIRQ
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART6_UART_Init
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART3_UART_Init
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART2_UART_Init
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART1_UART_Init
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM7_Init
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM6_Init
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM12_Init
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM10_Init
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI5_Init
+<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_DMA_Init
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_CAN2_Init
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_CAN1_Init
+<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
+</UL>
+<P><STRONG><a name="[f9]"></a>setCMMotor</STRONG> (Thumb, 122 bytes, Stack size 32 bytes, controltask.o(i.setCMMotor))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = setCMMotor &rArr; HAL_CAN_Transmit_IT
+</UL>
+<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_Transmit_IT
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
+>>>>>>> parent of 5f83272... 精简代码
 <LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_DisableIRQ
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;controlLoop
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[f9]"></a>setGMMotor</STRONG> (Thumb, 168 bytes, Stack size 40 bytes, controltask.o(i.setGMMotor))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = setGMMotor &rArr; HAL_CAN_Transmit_IT
 </UL>
@@ -1658,6 +2354,17 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;plateMotorInit
+=======
+<P><STRONG><a name="[f8]"></a>setGMMotor</STRONG> (Thumb, 134 bytes, Stack size 32 bytes, controltask.o(i.setGMMotor))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = setGMMotor &rArr; HAL_CAN_Transmit_IT
+</UL>
+<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_Error_Handler
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_CAN_Transmit_IT
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_DisableIRQ
+</UL>
+<BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;controlLoop
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <P>
 <H3>
@@ -1674,7 +2381,11 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = UART_DMAError
 </UL>
 <BR>[Calls]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_ErrorCallback
+<<<<<<< HEAD
 <LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_EndTxTransfer
+=======
+<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_EndTxTransfer
+>>>>>>> parent of 5f83272... 精简代码
 <LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_EndRxTransfer
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> stm32f4xx_hal_uart.o(i.HAL_UART_Receive_DMA)
@@ -1682,14 +2393,22 @@ Local Symbols
 <P><STRONG><a name="[70]"></a>UART_DMAReceiveCplt</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, stm32f4xx_hal_uart.o(i.UART_DMAReceiveCplt))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = UART_DMAReceiveCplt
 </UL>
+<<<<<<< HEAD
 <BR>[Calls]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
+=======
+<BR>[Calls]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> stm32f4xx_hal_uart.o(i.HAL_UART_Receive_DMA)
 </UL>
 <P><STRONG><a name="[71]"></a>UART_DMARxHalfCplt</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, stm32f4xx_hal_uart.o(i.UART_DMARxHalfCplt))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = UART_DMARxHalfCplt
 </UL>
+<<<<<<< HEAD
 <BR>[Calls]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxHalfCpltCallback
+=======
+<BR>[Calls]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxHalfCpltCallback
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> stm32f4xx_hal_uart.o(i.HAL_UART_Receive_DMA)
 </UL>
@@ -1698,14 +2417,22 @@ Local Symbols
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_DMAError
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[f3]"></a>UART_EndTxTransfer</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f4xx_hal_uart.o(i.UART_EndTxTransfer))
+=======
+<P><STRONG><a name="[f2]"></a>UART_EndTxTransfer</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f4xx_hal_uart.o(i.UART_EndTxTransfer))
+>>>>>>> parent of 5f83272... 精简代码
 <BR><BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_DMAError
 </UL>
 
 <P><STRONG><a name="[c9]"></a>UART_Receive_IT</STRONG> (Thumb, 140 bytes, Stack size 8 bytes, stm32f4xx_hal_uart.o(i.UART_Receive_IT))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = UART_Receive_IT
 </UL>
+<<<<<<< HEAD
 <BR>[Calls]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
+=======
+<BR>[Calls]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_IRQHandler
 </UL>
@@ -1713,8 +2440,13 @@ Local Symbols
 <P><STRONG><a name="[d1]"></a>UART_SetConfig</STRONG> (Thumb, 676 bytes, Stack size 24 bytes, stm32f4xx_hal_uart.o(i.UART_SetConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = UART_SetConfig
 </UL>
+<<<<<<< HEAD
 <BR>[Calls]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetPCLK2Freq
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetPCLK1Freq
+=======
+<BR>[Calls]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetPCLK2Freq
+<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetPCLK1Freq
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 <BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
 </UL>
@@ -1746,6 +2478,7 @@ Local Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_ConfigClockSource
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[bc]"></a>TIM_OC1_SetConfig</STRONG> (Thumb, 80 bytes, Stack size 12 bytes, stm32f4xx_hal_tim.o(i.TIM_OC1_SetConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = TIM_OC1_SetConfig
 </UL>
@@ -1762,6 +2495,24 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = TIM_OC4_SetConfig
 </UL>
 <BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_ConfigChannel
+=======
+<P><STRONG><a name="[bb]"></a>TIM_OC1_SetConfig</STRONG> (Thumb, 80 bytes, Stack size 12 bytes, stm32f4xx_hal_tim.o(i.TIM_OC1_SetConfig))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = TIM_OC1_SetConfig
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_ConfigChannel
+</UL>
+
+<P><STRONG><a name="[bd]"></a>TIM_OC3_SetConfig</STRONG> (Thumb, 88 bytes, Stack size 12 bytes, stm32f4xx_hal_tim.o(i.TIM_OC3_SetConfig))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = TIM_OC3_SetConfig
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_ConfigChannel
+</UL>
+
+<P><STRONG><a name="[be]"></a>TIM_OC4_SetConfig</STRONG> (Thumb, 70 bytes, Stack size 12 bytes, stm32f4xx_hal_tim.o(i.TIM_OC4_SetConfig))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = TIM_OC4_SetConfig
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_ConfigChannel
+>>>>>>> parent of 5f83272... 精简代码
 </UL>
 
 <P><STRONG><a name="[ab]"></a>TIM_TI1_ConfigInputStage</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, stm32f4xx_hal_tim.o(i.TIM_TI1_ConfigInputStage))

@@ -125,6 +125,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
 	//各模块初始化
 	InitRemoteControl();
+	InitMPU6500();
 	CMControlInit();
 	InitCanReception();
 	#ifdef DEBUG_MODE
@@ -155,6 +156,7 @@ int main(void)
 
   /* USER CODE BEGIN 3 */
 		//IMU数据更新放在主循环中
+		IMURefresh();
   }
   /* USER CODE END 3 */
 

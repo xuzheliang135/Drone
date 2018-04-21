@@ -57,7 +57,7 @@ extern uint8_t can1_update;
 extern uint8_t can1_type;
 extern uint8_t can2_update;
 
-void InitCanReception(void);
+void InitCanReception();
 void GYRO_RST(void);
 
 #endif /*__ CANTASK_H */

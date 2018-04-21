@@ -22,7 +22,6 @@
 "nt_infantry\remotetask.o"
 "nt_infantry\shoottask.o"
 "..\Tasks\Src\RMLib.lib"
-"nt_infantry\platemotor.o"
 "nt_infantry\system_stm32f4xx.o"
 "nt_infantry\main.o"
 "nt_infantry\gpio.o"

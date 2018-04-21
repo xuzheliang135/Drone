@@ -19,7 +19,7 @@
 
 #define OneShoot (1011) //722 7扇拨盘  1011 5扇拨盘
 
-void PlateMotorTask(void);
+void PlateMotorTask();
 void ShootOneBullet(void);
 void ShootRefModify(void);
 int32_t GetQuadEncoderDiff(void);

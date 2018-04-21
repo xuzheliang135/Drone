@@ -12,7 +12,7 @@
 #ifndef __MANIFOLDTASK_H
 #define __MANIFOLDTASK_H
 
-void manifoldUartRxCpltCallback(void);
-void InitManifoldUart(void);
+void manifoldUartRxCpltCallback();
+void InitManifoldUart();
 
 #endif /*__ MANIFOLDTASK_H */
