@@ -604,14 +604,14 @@ I (..\Tasks\Inc\RemoteTask.h)(0x5ACD935D)
 I (..\Tasks\Inc\pid_regulator.h)(0x5A11904D)
 I (..\Tasks\Inc\ControlTask.h)(0x5A59EB28)
 I (..\Tasks\Inc\IMUTask.h)(0x5ACD935D)
-I (..\Tasks\Inc\CANTask.h)(0x5ACD935D)
+I (..\Tasks\Inc\CANTask.h)(0x5ADB3652)
 I (..\Tasks\Inc\PlateMotor.h)(0x5ACD935D)
 I (..\Tasks\Inc\ShootTask.h)(0x5ACD935D)
 I (..\Tasks\Inc\drivers_ramp.h)(0x5A571716)
 I (..\Tasks\Inc\ManifoldTask.h)(0x5ACD935D)
 I (..\Tasks\Inc\JudgeTask.h)(0x5A587812)
 I (..\Tasks\Inc\UpperTask.h)(0x5A59EB28)
-F (..\Tasks\Src\ControlTask.c)(0x5AD21419)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Tasks\Inc --C99-I E:\GitHub\Drone\MDK-ARM\RTE-I "E:\Program Files\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include"-I "E:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx --C99-o nt_infantry\controltask.o --omf_browse nt_infantry\controltask.crf --depend nt_infantry\controltask.d)
+F (..\Tasks\Src\ControlTask.c)(0x5ADB3515)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Tasks\Inc --C99-I E:\GitHub\Drone\MDK-ARM\RTE-I "E:\Program Files\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include"-I "E:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx --C99-o nt_infantry\controltask.o --omf_browse nt_infantry\controltask.crf --depend nt_infantry\controltask.d)
 I (../Inc/includes.h)(0x5ACD935C)
 I (../Inc/main.h)(0x5AD213E8)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A0C6174)
@@ -655,7 +655,7 @@ I (..\Tasks\Inc\RemoteTask.h)(0x5ACD935D)
 I (..\Tasks\Inc\pid_regulator.h)(0x5A11904D)
 I (..\Tasks\Inc\ControlTask.h)(0x5A59EB28)
 I (..\Tasks\Inc\IMUTask.h)(0x5ACD935D)
-I (..\Tasks\Inc\CANTask.h)(0x5ACD935D)
+I (..\Tasks\Inc\CANTask.h)(0x5ADB3652)
 I (..\Tasks\Inc\PlateMotor.h)(0x5ACD935D)
 I (..\Tasks\Inc\ShootTask.h)(0x5ACD935D)
 I (..\Tasks\Inc\drivers_ramp.h)(0x5A571716)
@@ -706,7 +706,7 @@ I (..\Tasks\Inc\RemoteTask.h)(0x5ACD935D)
 I (..\Tasks\Inc\pid_regulator.h)(0x5A11904D)
 I (..\Tasks\Inc\ControlTask.h)(0x5A59EB28)
 I (..\Tasks\Inc\IMUTask.h)(0x5ACD935D)
-I (..\Tasks\Inc\CANTask.h)(0x5ACD935D)
+I (..\Tasks\Inc\CANTask.h)(0x5ADB3652)
 I (..\Tasks\Inc\PlateMotor.h)(0x5ACD935D)
 I (..\Tasks\Inc\ShootTask.h)(0x5ACD935D)
 I (..\Tasks\Inc\drivers_ramp.h)(0x5A571716)
@@ -757,7 +757,7 @@ I (..\Tasks\Inc\RemoteTask.h)(0x5ACD935D)
 I (..\Tasks\Inc\pid_regulator.h)(0x5A11904D)
 I (..\Tasks\Inc\ControlTask.h)(0x5A59EB28)
 I (..\Tasks\Inc\IMUTask.h)(0x5ACD935D)
-I (..\Tasks\Inc\CANTask.h)(0x5ACD935D)
+I (..\Tasks\Inc\CANTask.h)(0x5ADB3652)
 I (..\Tasks\Inc\PlateMotor.h)(0x5ACD935D)
 I (..\Tasks\Inc\ShootTask.h)(0x5ACD935D)
 I (..\Tasks\Inc\drivers_ramp.h)(0x5A571716)
@@ -808,7 +808,7 @@ I (..\Tasks\Inc\RemoteTask.h)(0x5ACD935D)
 I (..\Tasks\Inc\pid_regulator.h)(0x5A11904D)
 I (..\Tasks\Inc\ControlTask.h)(0x5A59EB28)
 I (..\Tasks\Inc\IMUTask.h)(0x5ACD935D)
-I (..\Tasks\Inc\CANTask.h)(0x5ACD935D)
+I (..\Tasks\Inc\CANTask.h)(0x5ADB3652)
 I (..\Tasks\Inc\PlateMotor.h)(0x5ACD935D)
 I (..\Tasks\Inc\ShootTask.h)(0x5ACD935D)
 I (..\Tasks\Inc\drivers_ramp.h)(0x5A571716)
@@ -860,7 +860,7 @@ I (..\Tasks\Inc\RemoteTask.h)(0x5ACD935D)
 I (..\Tasks\Inc\pid_regulator.h)(0x5A11904D)
 I (..\Tasks\Inc\ControlTask.h)(0x5A59EB28)
 I (..\Tasks\Inc\IMUTask.h)(0x5ACD935D)
-I (..\Tasks\Inc\CANTask.h)(0x5ACD935D)
+I (..\Tasks\Inc\CANTask.h)(0x5ADB3652)
 I (..\Tasks\Inc\PlateMotor.h)(0x5ACD935D)
 I (..\Tasks\Inc\ShootTask.h)(0x5ACD935D)
 I (..\Tasks\Inc\drivers_ramp.h)(0x5A571716)
@@ -944,7 +944,7 @@ I (..\Tasks\Inc\RemoteTask.h)(0x5ACD935D)
 I (..\Tasks\Inc\pid_regulator.h)(0x5A11904D)
 I (..\Tasks\Inc\ControlTask.h)(0x5A59EB28)
 I (..\Tasks\Inc\IMUTask.h)(0x5ACD935D)
-I (..\Tasks\Inc\CANTask.h)(0x5ACD935D)
+I (..\Tasks\Inc\CANTask.h)(0x5ADB3652)
 I (..\Tasks\Inc\PlateMotor.h)(0x5ACD935D)
 I (..\Tasks\Inc\ShootTask.h)(0x5ACD935D)
 I (..\Tasks\Inc\drivers_ramp.h)(0x5A571716)

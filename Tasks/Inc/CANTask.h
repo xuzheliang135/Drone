@@ -23,8 +23,8 @@
 #define CMBL_RXID 0x203u
 #define CMBR_RXID 0x204u
 
-#define GMYAW_RXID 0x205u
-#define GMPITCH_RXID 0x206u
+#define GMYAW_RXID 0x206u
+#define GMPITCH_RXID 0x205u
 
 #define ZGYRO_RXID   0x401u
 

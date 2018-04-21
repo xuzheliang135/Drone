@@ -239,7 +239,6 @@ void controlLoop()
 		
 		setCMMotor();
 		
-//		PlateMotorTask();
 	}
 }
 
