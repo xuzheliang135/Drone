@@ -22,19 +22,12 @@ Dialog DLL:      TCM.DLL V1.14.4.0
  
 <h2>Project:</h2>
 E:\GitHub\Drone\MDK-ARM\NT_Infantry.uvprojx
-<<<<<<< HEAD
 Project File Date:  04/21/2018
-=======
-Project File Date:  04/13/2018
->>>>>>> parent of f8c92c0... 修复了接电池中断不触发的bug，中断脚是PE4
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.05 update 1 (build 106)', folder: 'E:\Program Files\Keil_v5\ARM\ARMCC\Bin'
 Build target 'NT_Infantry'
-<<<<<<< HEAD
 compiling CANTask.c...
-../Inc/includes.h(37): warning:  #1-D: last line of file ends without a newline
-  #endif /* __INCLUDES_H */
 ..\Tasks\Inc\RemoteTask.h(148): warning:  #1295-D: Deprecated declaration InitRemoteControl - give arg types
   void InitRemoteControl();
 ..\Tasks\Inc\RemoteTask.h(149): warning:  #1295-D: Deprecated declaration RemoteTaskInit - give arg types
@@ -45,34 +38,182 @@ compiling CANTask.c...
   void InitCanReception();
 ..\Tasks\Inc\PlateMotor.h(22): warning:  #1295-D: Deprecated declaration PlateMotorTask - give arg types
   void PlateMotorTask();
-..\Tasks\Inc\PlateMotor.h(98): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\Tasks\Inc\ShootTask.h(38): warning:  #1-D: last line of file ends without a newline
-  #endif /* __SHOOTTASK_H */
 ..\Tasks\Inc\ManifoldTask.h(15): warning:  #1295-D: Deprecated declaration manifoldUartRxCpltCallback - give arg types
   void manifoldUartRxCpltCallback();
 ..\Tasks\Inc\ManifoldTask.h(16): warning:  #1295-D: Deprecated declaration InitManifoldUart - give arg types
   void InitManifoldUart();
-../Inc/includes.h(37): warning:  #1-D: last line of file ends without a newline
-  #endif /* __INCLUDES_H */
-..\Tasks\Src\CANTask.c(32): error:  #20: identifier "hcan2" is undefined
-        else if(hcan == &ZGYRO_CAN)
-..\Tasks\Src\CANTask.c(61): error:  #20: identifier "hcan2" is undefined
-        ZGYRO_CAN.pRxMsg = &ZGYROCanRxMsg;
-..\Tasks\Src\CANTask.c(120): error:  #20: identifier "hcan2" is undefined
-        else if(hcan == &ZGYRO_CAN)//CAN2数据
-..\Tasks\Src\CANTask.c(146): error:  #20: identifier "hcan2" is undefined
-        ZGYRO_CAN.pTxMsg = &pData;
-..\Tasks\Src\CANTask.c(186): warning:  #1-D: last line of file ends without a newline
-  }
-..\Tasks\Src\CANTask.c: 12 warnings, 4 errors
-"NT_Infantry\NT_Infantry.axf" - 4 Error(s), 12 Warning(s).
-=======
+..\Tasks\Src\CANTask.c: 7 warnings, 0 errors
 compiling ControlTask.c...
+..\Tasks\Inc\RemoteTask.h(148): warning:  #1295-D: Deprecated declaration InitRemoteControl - give arg types
+  void InitRemoteControl();
+..\Tasks\Inc\RemoteTask.h(149): warning:  #1295-D: Deprecated declaration RemoteTaskInit - give arg types
+  void RemoteTaskInit();
+..\Tasks\Inc\IMUTask.h(146): warning:  #1295-D: Deprecated declaration IMURefresh - give arg types
+  void IMURefresh();
+..\Tasks\Inc\CANTask.h(60): warning:  #1295-D: Deprecated declaration InitCanReception - give arg types
+  void InitCanReception();
+..\Tasks\Inc\PlateMotor.h(22): warning:  #1295-D: Deprecated declaration PlateMotorTask - give arg types
+  void PlateMotorTask();
+..\Tasks\Inc\ManifoldTask.h(15): warning:  #1295-D: Deprecated declaration manifoldUartRxCpltCallback - give arg types
+  void manifoldUartRxCpltCallback();
+..\Tasks\Inc\ManifoldTask.h(16): warning:  #1295-D: Deprecated declaration InitManifoldUart - give arg types
+  void InitManifoldUart();
+..\Tasks\Src\ControlTask.c: 7 warnings, 0 errors
+compiling IMUTask.c...
+..\Tasks\Inc\RemoteTask.h(148): warning:  #1295-D: Deprecated declaration InitRemoteControl - give arg types
+  void InitRemoteControl();
+..\Tasks\Inc\RemoteTask.h(149): warning:  #1295-D: Deprecated declaration RemoteTaskInit - give arg types
+  void RemoteTaskInit();
+..\Tasks\Inc\IMUTask.h(146): warning:  #1295-D: Deprecated declaration IMURefresh - give arg types
+  void IMURefresh();
+..\Tasks\Inc\CANTask.h(60): warning:  #1295-D: Deprecated declaration InitCanReception - give arg types
+  void InitCanReception();
+..\Tasks\Inc\PlateMotor.h(22): warning:  #1295-D: Deprecated declaration PlateMotorTask - give arg types
+  void PlateMotorTask();
+..\Tasks\Inc\ManifoldTask.h(15): warning:  #1295-D: Deprecated declaration manifoldUartRxCpltCallback - give arg types
+  void manifoldUartRxCpltCallback();
+..\Tasks\Inc\ManifoldTask.h(16): warning:  #1295-D: Deprecated declaration InitManifoldUart - give arg types
+  void InitManifoldUart();
+..\Tasks\Src\IMUTask.c(117): warning:  #1-D: last line of file ends without a newline
+  }
+..\Tasks\Src\IMUTask.c: 8 warnings, 0 errors
+compiling pid_regulator.c...
+..\Tasks\Inc\RemoteTask.h(148): warning:  #1295-D: Deprecated declaration InitRemoteControl - give arg types
+  void InitRemoteControl();
+..\Tasks\Inc\RemoteTask.h(149): warning:  #1295-D: Deprecated declaration RemoteTaskInit - give arg types
+  void RemoteTaskInit();
+..\Tasks\Inc\IMUTask.h(146): warning:  #1295-D: Deprecated declaration IMURefresh - give arg types
+  void IMURefresh();
+..\Tasks\Inc\CANTask.h(60): warning:  #1295-D: Deprecated declaration InitCanReception - give arg types
+  void InitCanReception();
+..\Tasks\Inc\PlateMotor.h(22): warning:  #1295-D: Deprecated declaration PlateMotorTask - give arg types
+  void PlateMotorTask();
+..\Tasks\Inc\ManifoldTask.h(15): warning:  #1295-D: Deprecated declaration manifoldUartRxCpltCallback - give arg types
+  void manifoldUartRxCpltCallback();
+..\Tasks\Inc\ManifoldTask.h(16): warning:  #1295-D: Deprecated declaration InitManifoldUart - give arg types
+  void InitManifoldUart();
+..\Tasks\Src\pid_regulator.c: 7 warnings, 0 errors
+compiling RemoteTask.c...
+..\Tasks\Inc\RemoteTask.h(148): warning:  #1295-D: Deprecated declaration InitRemoteControl - give arg types
+  void InitRemoteControl();
+..\Tasks\Inc\RemoteTask.h(149): warning:  #1295-D: Deprecated declaration RemoteTaskInit - give arg types
+  void RemoteTaskInit();
+..\Tasks\Inc\IMUTask.h(146): warning:  #1295-D: Deprecated declaration IMURefresh - give arg types
+  void IMURefresh();
+..\Tasks\Inc\CANTask.h(60): warning:  #1295-D: Deprecated declaration InitCanReception - give arg types
+  void InitCanReception();
+..\Tasks\Inc\PlateMotor.h(22): warning:  #1295-D: Deprecated declaration PlateMotorTask - give arg types
+  void PlateMotorTask();
+..\Tasks\Inc\ManifoldTask.h(15): warning:  #1295-D: Deprecated declaration manifoldUartRxCpltCallback - give arg types
+  void manifoldUartRxCpltCallback();
+..\Tasks\Inc\ManifoldTask.h(16): warning:  #1295-D: Deprecated declaration InitManifoldUart - give arg types
+  void InitManifoldUart();
+..\Tasks\Src\RemoteTask.c: 7 warnings, 0 errors
+compiling ShootTask.c...
+..\Tasks\Inc\RemoteTask.h(148): warning:  #1295-D: Deprecated declaration InitRemoteControl - give arg types
+  void InitRemoteControl();
+..\Tasks\Inc\RemoteTask.h(149): warning:  #1295-D: Deprecated declaration RemoteTaskInit - give arg types
+  void RemoteTaskInit();
+..\Tasks\Inc\IMUTask.h(146): warning:  #1295-D: Deprecated declaration IMURefresh - give arg types
+  void IMURefresh();
+..\Tasks\Inc\CANTask.h(60): warning:  #1295-D: Deprecated declaration InitCanReception - give arg types
+  void InitCanReception();
+..\Tasks\Inc\PlateMotor.h(22): warning:  #1295-D: Deprecated declaration PlateMotorTask - give arg types
+  void PlateMotorTask();
+..\Tasks\Inc\ManifoldTask.h(15): warning:  #1295-D: Deprecated declaration manifoldUartRxCpltCallback - give arg types
+  void manifoldUartRxCpltCallback();
+..\Tasks\Inc\ManifoldTask.h(16): warning:  #1295-D: Deprecated declaration InitManifoldUart - give arg types
+  void InitManifoldUart();
+..\Tasks\Src\ShootTask.c: 7 warnings, 0 errors
+compiling JudgeTask.c...
+..\Tasks\Inc\RemoteTask.h(148): warning:  #1295-D: Deprecated declaration InitRemoteControl - give arg types
+  void InitRemoteControl();
+..\Tasks\Inc\RemoteTask.h(149): warning:  #1295-D: Deprecated declaration RemoteTaskInit - give arg types
+  void RemoteTaskInit();
+..\Tasks\Inc\IMUTask.h(146): warning:  #1295-D: Deprecated declaration IMURefresh - give arg types
+  void IMURefresh();
+..\Tasks\Inc\CANTask.h(60): warning:  #1295-D: Deprecated declaration InitCanReception - give arg types
+  void InitCanReception();
+..\Tasks\Inc\PlateMotor.h(22): warning:  #1295-D: Deprecated declaration PlateMotorTask - give arg types
+  void PlateMotorTask();
+..\Tasks\Inc\ManifoldTask.h(15): warning:  #1295-D: Deprecated declaration manifoldUartRxCpltCallback - give arg types
+  void manifoldUartRxCpltCallback();
+..\Tasks\Inc\ManifoldTask.h(16): warning:  #1295-D: Deprecated declaration InitManifoldUart - give arg types
+  void InitManifoldUart();
+..\Tasks\Src\JudgeTask.c: 7 warnings, 0 errors
+compiling ManifoldTask.c...
+..\Tasks\Inc\RemoteTask.h(148): warning:  #1295-D: Deprecated declaration InitRemoteControl - give arg types
+  void InitRemoteControl();
+..\Tasks\Inc\RemoteTask.h(149): warning:  #1295-D: Deprecated declaration RemoteTaskInit - give arg types
+  void RemoteTaskInit();
+..\Tasks\Inc\IMUTask.h(146): warning:  #1295-D: Deprecated declaration IMURefresh - give arg types
+  void IMURefresh();
+..\Tasks\Inc\CANTask.h(60): warning:  #1295-D: Deprecated declaration InitCanReception - give arg types
+  void InitCanReception();
+..\Tasks\Inc\PlateMotor.h(22): warning:  #1295-D: Deprecated declaration PlateMotorTask - give arg types
+  void PlateMotorTask();
+..\Tasks\Inc\ManifoldTask.h(15): warning:  #1295-D: Deprecated declaration manifoldUartRxCpltCallback - give arg types
+  void manifoldUartRxCpltCallback();
+..\Tasks\Inc\ManifoldTask.h(16): warning:  #1295-D: Deprecated declaration InitManifoldUart - give arg types
+  void InitManifoldUart();
+..\Tasks\Src\ManifoldTask.c(88): warning:  #1-D: last line of file ends without a newline
+  }
+..\Tasks\Src\ManifoldTask.c: 8 warnings, 0 errors
+compiling UpperTask.c...
+..\Tasks\Inc\RemoteTask.h(148): warning:  #1295-D: Deprecated declaration InitRemoteControl - give arg types
+  void InitRemoteControl();
+..\Tasks\Inc\RemoteTask.h(149): warning:  #1295-D: Deprecated declaration RemoteTaskInit - give arg types
+  void RemoteTaskInit();
+..\Tasks\Inc\IMUTask.h(146): warning:  #1295-D: Deprecated declaration IMURefresh - give arg types
+  void IMURefresh();
+..\Tasks\Inc\CANTask.h(60): warning:  #1295-D: Deprecated declaration InitCanReception - give arg types
+  void InitCanReception();
+..\Tasks\Inc\PlateMotor.h(22): warning:  #1295-D: Deprecated declaration PlateMotorTask - give arg types
+  void PlateMotorTask();
+..\Tasks\Inc\ManifoldTask.h(15): warning:  #1295-D: Deprecated declaration manifoldUartRxCpltCallback - give arg types
+  void manifoldUartRxCpltCallback();
+..\Tasks\Inc\ManifoldTask.h(16): warning:  #1295-D: Deprecated declaration InitManifoldUart - give arg types
+  void InitManifoldUart();
+..\Tasks\Src\UpperTask.c(227): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Tasks\Src\UpperTask.c: 8 warnings, 0 errors
+compiling PlateMotor.c...
+..\Tasks\Inc\RemoteTask.h(148): warning:  #1295-D: Deprecated declaration InitRemoteControl - give arg types
+  void InitRemoteControl();
+..\Tasks\Inc\RemoteTask.h(149): warning:  #1295-D: Deprecated declaration RemoteTaskInit - give arg types
+  void RemoteTaskInit();
+..\Tasks\Inc\IMUTask.h(146): warning:  #1295-D: Deprecated declaration IMURefresh - give arg types
+  void IMURefresh();
+..\Tasks\Inc\CANTask.h(60): warning:  #1295-D: Deprecated declaration InitCanReception - give arg types
+  void InitCanReception();
+..\Tasks\Inc\PlateMotor.h(22): warning:  #1295-D: Deprecated declaration PlateMotorTask - give arg types
+  void PlateMotorTask();
+..\Tasks\Inc\ManifoldTask.h(15): warning:  #1295-D: Deprecated declaration manifoldUartRxCpltCallback - give arg types
+  void manifoldUartRxCpltCallback();
+..\Tasks\Inc\ManifoldTask.h(16): warning:  #1295-D: Deprecated declaration InitManifoldUart - give arg types
+  void InitManifoldUart();
+..\Tasks\Src\PlateMotor.c(203): warning:  #1-D: last line of file ends without a newline
+  }
+..\Tasks\Src\PlateMotor.c: 8 warnings, 0 errors
+compiling main.c...
+..\Tasks\Inc\RemoteTask.h(148): warning:  #1295-D: Deprecated declaration InitRemoteControl - give arg types
+  void InitRemoteControl();
+..\Tasks\Inc\RemoteTask.h(149): warning:  #1295-D: Deprecated declaration RemoteTaskInit - give arg types
+  void RemoteTaskInit();
+..\Tasks\Inc\IMUTask.h(146): warning:  #1295-D: Deprecated declaration IMURefresh - give arg types
+  void IMURefresh();
+..\Tasks\Inc\CANTask.h(60): warning:  #1295-D: Deprecated declaration InitCanReception - give arg types
+  void InitCanReception();
+..\Tasks\Inc\PlateMotor.h(22): warning:  #1295-D: Deprecated declaration PlateMotorTask - give arg types
+  void PlateMotorTask();
+..\Tasks\Inc\ManifoldTask.h(15): warning:  #1295-D: Deprecated declaration manifoldUartRxCpltCallback - give arg types
+  void manifoldUartRxCpltCallback();
+..\Tasks\Inc\ManifoldTask.h(16): warning:  #1295-D: Deprecated declaration InitManifoldUart - give arg types
+  void InitManifoldUart();
+../Src/main.c: 7 warnings, 0 errors
 linking...
-Program Size: Code=17628 RO-data=492 RW-data=708 ZI-data=2284  
-"NT_Infantry\NT_Infantry.axf" - 0 Error(s), 0 Warning(s).
->>>>>>> parent of f8c92c0... 修复了接电池中断不触发的bug，中断脚是PE4
+Program Size: Code=19736 RO-data=1280 RW-data=912 ZI-data=2384  
+"NT_Infantry\NT_Infantry.axf" - 0 Error(s), 81 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -91,7 +232,6 @@ Package Vendor: ARM
 
    * Component: ARM::CMSIS:CORE:3.40.0
       Source file:   CMSIS\UserCodeTemplates\ARM\ITM_Retarget.c
-Target not created.
 </pre>
 </body>
 </html>

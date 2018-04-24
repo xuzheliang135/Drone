@@ -113,7 +113,6 @@ void WorkStateFSM(void)
 			if (inputmode == STOP) WorkState = STOP_STATE;
 			
 			if(prepare_time<5000) prepare_time++;
-			if(prepare_time == 3000) GYRO_RST();//开机三秒复位陀螺仪
 			if(prepare_time == 5000)//开机五秒进入正常模式
 			{
 				WorkState = NORMAL_STATE;
@@ -195,10 +194,10 @@ void setGMMotor()
 	CMGMMOTOR_CAN.pTxMsg->RTR = CAN_RTR_DATA;
 	CMGMMOTOR_CAN.pTxMsg->DLC = 0x08;
 	
-	CMGMMOTOR_CAN.pTxMsg->Data[0] = (uint8_t)(yawIntensity >> 8);
-	CMGMMOTOR_CAN.pTxMsg->Data[1] = (uint8_t)yawIntensity;
-	CMGMMOTOR_CAN.pTxMsg->Data[2] = (uint8_t)(pitchIntensity >> 8);
-	CMGMMOTOR_CAN.pTxMsg->Data[3] = (uint8_t)pitchIntensity;
+	CMGMMOTOR_CAN.pTxMsg->Data[0] = (uint8_t)(pitchIntensity >> 8);
+	CMGMMOTOR_CAN.pTxMsg->Data[1] = (uint8_t)pitchIntensity;
+	CMGMMOTOR_CAN.pTxMsg->Data[2] = (uint8_t)(yawIntensity >> 8);
+	CMGMMOTOR_CAN.pTxMsg->Data[3] = (uint8_t)yawIntensity;
 	CMGMMOTOR_CAN.pTxMsg->Data[4] = 0;
 	CMGMMOTOR_CAN.pTxMsg->Data[5] = 0;
 	CMGMMOTOR_CAN.pTxMsg->Data[6] = 0;
@@ -289,7 +288,7 @@ void ControlYaw(void)
 		yawRealAngle = -ZGyroModuleAngle;
 	}
 							
-	yawIntensity = ProcessYawPID(yawAngleTarget, yawRealAngle, -gYroZs);
+	yawIntensity = -ProcessYawPID(yawAngleTarget, yawRealAngle, 1);//-gYroZs
 	
 	ControlRotate();
 }
@@ -302,9 +301,9 @@ void ControlPitch(void)
 	pitchRealAngle = -(GMPITCHRx.angle - pitchZeroAngle) * 360 / 8192.0;
 	NORMALIZE_ANGLE180(pitchRealAngle);
 
-	MINMAX(pitchAngleTarget, -9.0f, 32);
+	MINMAX(pitchAngleTarget, -180, 180);//MINMAX(pitchAngleTarget, -9.0f, 32);
 				
-	pitchIntensity = ProcessPitchPID(pitchAngleTarget,pitchRealAngle,-gYroXs);
+	pitchIntensity = -ProcessPitchPID(pitchAngleTarget,pitchRealAngle,1);//-gYroXs
 }
 
 //主控制循环
