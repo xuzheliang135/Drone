@@ -361,7 +361,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 }
 extern int shootFlag;
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
-	if(GPIO_Pin&GPIO_PIN_4){
+	if(GPIO_Pin&GPIO_PIN_0){
 		CMFLIntensity=0;
 		shootFlag=1;
 	}
