@@ -45,8 +45,10 @@ nt_infantry\uppertask.o: ..\Tasks\Inc\pid_regulator.h
 nt_infantry\uppertask.o: ..\Tasks\Inc\ControlTask.h
 nt_infantry\uppertask.o: ..\Tasks\Inc\IMUTask.h
 nt_infantry\uppertask.o: ..\Tasks\Inc\CANTask.h
+nt_infantry\uppertask.o: ..\Tasks\Inc\PlateMotor.h
 nt_infantry\uppertask.o: ..\Tasks\Inc\ShootTask.h
 nt_infantry\uppertask.o: ..\Tasks\Inc\drivers_ramp.h
+nt_infantry\uppertask.o: ..\Tasks\Inc\ManifoldTask.h
 nt_infantry\uppertask.o: ..\Tasks\Inc\JudgeTask.h
 nt_infantry\uppertask.o: ..\Tasks\Inc\UpperTask.h
 nt_infantry\uppertask.o: E:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

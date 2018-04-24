@@ -319,14 +319,6 @@ void controlLoop()
 		
 		setGMMotor();
 		
-<<<<<<< HEAD
-//		ControlCMFL();
-=======
-		ControlCMFL();
-		ControlCMFR();
-		ControlCMBL();
-		ControlCMBR();
->>>>>>> parent of 5f83272... 精简代码
 		
 		setCMMotor();
 		
@@ -366,7 +358,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 			rc_update = 0;
 		}
 	}
-<<<<<<< HEAD
 }
 extern int shootFlag;
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
@@ -375,14 +366,5 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
 		shootFlag=1;
 	}
 	
-}
 //PF0口中断函数，单发控制
-=======
-	else if (htim->Instance == htim10.Instance)  //10ms，处理上位机数据，优先级不高
-	{
-		#ifdef DEBUG_MODE
-		zykProcessData();
-		#endif
-	}
 }
->>>>>>> parent of 5f83272... 精简代码
