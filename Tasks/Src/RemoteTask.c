@@ -54,7 +54,7 @@ void RemoteControlProcess(Remote *rc)
 		
 		pitchAngleTarget += (rc->ch3 - (int16_t)REMOTE_CONTROLLER_STICK_OFFSET) * STICK_TO_PITCH_ANGLE_INC_FACT;
 		rotate_forward = (rc->ch2 - (int16_t)REMOTE_CONTROLLER_STICK_OFFSET) * STICK_TO_YAW_ANGLE_INC_FACT; 
-		yawAngleTarget   -= rotate_forward;
+		yawAngleTarget   += rotate_forward;
 	}
 	RemoteShootControl(&g_switch1, rc->s1);
 }
@@ -290,16 +290,5 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *UartHandle)
 {
 	if(UartHandle == &RC_UART){
 		rc_update = 1;
-	}
-	else if(UartHandle == &MANIFOLD_UART)
-	{
-		//manifoldUartRxCpltCallback();  //妙算信号数据解算
-		#ifdef DEBUG_MODE
-		ctrlUartRxCpltCallback();
-		#endif
-	}
-	else if(UartHandle == &JUDGE_UART)
-	{
-		judgeUartRxCpltCallback();  //裁判系统数据解算
 	}
 }   

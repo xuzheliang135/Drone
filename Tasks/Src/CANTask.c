@@ -20,14 +20,13 @@ float ZGyroModuleAngle = 0.0;
 
 uint8_t can1_update = 1;
 uint8_t can1_type = 0;
-uint8_t can2_update = 1;
 /********************CAN发送*****************************/
 //云台底盘CAN数据依次发送保证发送资源正常
 void HAL_CAN_TxCpltCallback(CAN_HandleTypeDef* hcan)
 {
 	if(hcan == &CMGMMOTOR_CAN){
 		can1_update = 1;
-		//can1_type = 1 - can1_type;
+		can1_type = 1 - can1_type;
 	}
 }
 
@@ -63,18 +62,6 @@ void HAL_CAN_RxCpltCallback(CAN_HandleTypeDef* hcan){
 			case CMFL_RXID:
 				CMFLRx.angle = CanRxGetU16(CMGMCanRxMsg, 0);
 				CMFLRx.RotateSpeed = CanRxGetU16(CMGMCanRxMsg, 1);
-				break;
-			case CMFR_RXID:
-				CMFRRx.angle = CanRxGetU16(CMGMCanRxMsg, 0);
-				CMFRRx.RotateSpeed = CanRxGetU16(CMGMCanRxMsg, 1);
-				break;
-			case CMBL_RXID:
-				CMBLRx.angle = CanRxGetU16(CMGMCanRxMsg, 0);
-				CMBLRx.RotateSpeed = CanRxGetU16(CMGMCanRxMsg, 1);
-				break;
-			case CMBR_RXID:
-				CMBRRx.angle = CanRxGetU16(CMGMCanRxMsg, 0);
-				CMBRRx.RotateSpeed = CanRxGetU16(CMGMCanRxMsg, 1);
 				break;
 			case GMYAW_RXID:
 				GMYAWRx.angle = CanRxGetU16(CMGMCanRxMsg, 0);

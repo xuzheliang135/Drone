@@ -45,7 +45,6 @@ nt_infantry\judgetask.o: ..\Tasks\Inc\pid_regulator.h
 nt_infantry\judgetask.o: ..\Tasks\Inc\ControlTask.h
 nt_infantry\judgetask.o: ..\Tasks\Inc\IMUTask.h
 nt_infantry\judgetask.o: ..\Tasks\Inc\CANTask.h
-nt_infantry\judgetask.o: ..\Tasks\Inc\PlateMotor.h
 nt_infantry\judgetask.o: ..\Tasks\Inc\ShootTask.h
 nt_infantry\judgetask.o: ..\Tasks\Inc\drivers_ramp.h
 nt_infantry\judgetask.o: ..\Tasks\Inc\ManifoldTask.h

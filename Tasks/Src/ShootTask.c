@@ -45,9 +45,7 @@ void RemoteShootControl(RemoteSwitch_t *sw, uint8_t val)
 			{
 				ShootState = NOSHOOTING;
 				frictionRamp.ResetCounter(&frictionRamp);
-				FrictionWheelState = FRICTION_WHEEL_START_TURNNING;	 
-				
-				CMFLIntensity = 0;
+				FrictionWheelState = FRICTION_WHEEL_START_TURNNING;
 				shootFlag=0;
 			}				 		
 		}break;
@@ -59,13 +57,12 @@ void RemoteShootControl(RemoteSwitch_t *sw, uint8_t val)
 				SetFrictionWheelSpeed(1000);
 				FrictionWheelState = FRICTION_WHEEL_OFF;
 				frictionRamp.ResetCounter(&frictionRamp);
-				
-				CMFLIntensity = 0;
 				shootFlag=0;
 			}
 			else
 			{
 				SetFrictionWheelSpeed(1000 + (FRICTION_WHEEL_MAX_DUTY-1000)*frictionRamp.Calc(&frictionRamp)); 
+				shootFlag=0;
 				//SetFrictionWheelSpeed(1300); 
 				//SetFrictionWheelSpeed(1000);
 				//g_friction_wheel_state = FRICTION_WHEEL_ON; 
@@ -84,20 +81,20 @@ void RemoteShootControl(RemoteSwitch_t *sw, uint8_t val)
 				SetFrictionWheelSpeed(1000); 
 				frictionRamp.ResetCounter(&frictionRamp);
 				ShootState = NOSHOOTING;
-				
-				CMFLIntensity = 0;
 				shootFlag=0;
 			}
 			else if(sw->switch_value_raw == 2)
 			{
 				ShootState = SHOOTING;
 				if(shootFlag==0){
-					CMFLIntensity = 7000;
-				}
+					CMFLIntensity = 8000;
+				}else CMFLIntensity = 0;
 			}
 			else
 			{
 				ShootState = NOSHOOTING;
+				CMFLIntensity = 0;
+				shootFlag=0;
 			}					 
 		} break;				
 	}

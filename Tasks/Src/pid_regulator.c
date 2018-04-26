@@ -44,9 +44,18 @@ extern fw_PID_Regulator_t yawPositionPID;
 extern fw_PID_Regulator_t pitchSpeedPID;
 extern fw_PID_Regulator_t yawSpeedPID;
 
+int16_t PID_PROCESS_Double_Yaw(fw_PID_Regulator_t pid_position,fw_PID_Regulator_t pid_speed,float target, float position_feedback, float velocity_feedback)
+{
+	//position		
+	pid_position.target = target;
+	pid_position.feedback = position_feedback;
+	pid_position.Calc(&pid_position);
+
+	return pid_position.output;
+}
 int16_t ProcessYawPID(float target, float position_feedback, float velocity_feedback)
 {
-	return PID_PROCESS_Double(yawPositionPID,yawSpeedPID,target,position_feedback,velocity_feedback);
+	return PID_PROCESS_Double_Yaw(yawPositionPID,yawSpeedPID,target,position_feedback,velocity_feedback);
 }
 int16_t ProcessPitchPID(float target, float position_feedback, float velocity_feedback)
 {

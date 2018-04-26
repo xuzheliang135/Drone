@@ -27,7 +27,6 @@
 #include "IMUTask.h"
 #include "CANTask.h"
 //#include "pid_regulator.h"
-#include "PlateMotor.h"
 #include "ShootTask.h"
 #include "drivers_ramp.h"
 #include "ManifoldTask.h"

@@ -369,7 +369,7 @@
               <MiscControls>--C99</MiscControls>
               <Define>USE_HAL_DRIVER,STM32F427xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;       ../Drivers/STM32F4xx_HAL_Driver/Inc;       ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;       ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;       ../Drivers/CMSIS/Include;       ..\Tasks\Inc</IncludePath>
+              <IncludePath>../Inc;      ../Drivers/STM32F4xx_HAL_Driver/Inc;      ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;      ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;      ../Drivers/CMSIS/Include;      ..\Tasks\Inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -513,11 +513,6 @@
               <FilePath>..\Tasks\Src\ControlTask.c</FilePath>
             </File>
             <File>
-              <FileName>IMUTask.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Tasks\Src\IMUTask.c</FilePath>
-            </File>
-            <File>
               <FileName>pid_regulator.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Tasks\Src\pid_regulator.c</FilePath>
@@ -536,26 +531,6 @@
               <FileName>RMLib.lib</FileName>
               <FileType>4</FileType>
               <FilePath>..\Tasks\Src\RMLib.lib</FilePath>
-            </File>
-            <File>
-              <FileName>JudgeTask.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Tasks\Src\JudgeTask.c</FilePath>
-            </File>
-            <File>
-              <FileName>ManifoldTask.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Tasks\Src\ManifoldTask.c</FilePath>
-            </File>
-            <File>
-              <FileName>UpperTask.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Tasks\Src\UpperTask.c</FilePath>
-            </File>
-            <File>
-              <FileName>PlateMotor.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Tasks\Src\PlateMotor.c</FilePath>
             </File>
           </Files>
         </Group>

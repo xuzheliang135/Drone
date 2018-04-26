@@ -73,6 +73,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
+	HAL_GPIO_WritePin(GPIOG,GPIO_PIN_13,GPIO_PIN_SET);
   /* USER CODE END 1 */
 
   /* MCU Configuration----------------------------------------------------------*/
@@ -119,13 +120,10 @@ int main(void)
   MX_USART6_UART_Init();
   MX_TIM7_Init();
   MX_TIM10_Init();
-  MX_TIM4_Init();
-  MX_TIM5_Init();
 
   /* USER CODE BEGIN 2 */
 	//各模块初始化
 	InitRemoteControl();
-	InitMPU6500();
 	CMControlInit();
 	InitCanReception();
 	#ifdef DEBUG_MODE
@@ -135,7 +133,6 @@ int main(void)
 	HAL_TIM_Base_Start_IT(&htim6);
 	HAL_TIM_Base_Start_IT(&htim7);
 	InitUserTimer();
-	plateMotorInit();
 	
 	HAL_NVIC_EnableIRQ(CAN1_RX0_IRQn);
 	HAL_NVIC_EnableIRQ(CAN2_RX0_IRQn);
@@ -155,8 +152,6 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-		//IMU数据更新放在主循环中
-		IMURefresh();
   }
   /* USER CODE END 3 */
 

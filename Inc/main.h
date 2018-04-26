@@ -47,21 +47,8 @@
 
 /* Private define ------------------------------------------------------------*/
 
-#define SWITCH_Pin GPIO_PIN_0
-#define SWITCH_GPIO_Port GPIOF
-#define SWITCH_EXTI_IRQn EXTI0_IRQn
 #define NSS_Pin GPIO_PIN_6
 #define NSS_GPIO_Port GPIOF
-#define EncoderB_Pin GPIO_PIN_11
-#define EncoderB_GPIO_Port GPIOH
-#define EncoderA_Pin GPIO_PIN_10
-#define EncoderA_GPIO_Port GPIOH
-#define PM_Dir_Ctrl1_Pin GPIO_PIN_4
-#define PM_Dir_Ctrl1_GPIO_Port GPIOA
-#define PM_Ctrl_Pin GPIO_PIN_12
-#define PM_Ctrl_GPIO_Port GPIOD
-#define PM_Dir_Ctrl2_Pin GPIO_PIN_5
-#define PM_Dir_Ctrl2_GPIO_Port GPIOA
 #define LED_GREEN_Pin GPIO_PIN_14
 #define LED_GREEN_GPIO_Port GPIOF
 #define LED_RED_Pin GPIO_PIN_7
