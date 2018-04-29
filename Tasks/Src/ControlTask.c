@@ -33,6 +33,7 @@ PID_Regulator_t CM4SpeedPID = CHASSIS_MOTOR_SPEED_PID_DEFAULT;
 int16_t CMFLIntensity = 0, CMFRIntensity = 0, CMBLIntensity = 0, CMBRIntensity = 0;
 int16_t yawIntensity = 0;		
 int16_t pitchIntensity = 0;
+int16_t FLAngleTarget=0;
 
 //底盘PID初始化
 void CMControlInit(void)
@@ -47,16 +48,19 @@ void CMControlInit(void)
 //单个底盘电机的控制，下同
 void ControlCMFL(void)
 {			
-	CM1SpeedPID.ref =  ChassisSpeedRef.forward_back_ref*0.075 
-											 + ChassisSpeedRef.left_right_ref*0.075 
-											 + ChassisSpeedRef.rotate_ref*0.075;	
-	CM1SpeedPID.ref = 160 * CM1SpeedPID.ref;
-			
-			
-	CM1SpeedPID.fdb = CMFLRx.RotateSpeed;
+//	CM1SpeedPID.ref =  ChassisSpeedRef.forward_back_ref*0.075 
+//											 + ChassisSpeedRef.left_right_ref*0.075 
+//											 + ChassisSpeedRef.rotate_ref*0.075;	
+//	CM1SpeedPID.ref = 160 * CM1SpeedPID.ref;
+//			
+//			
+//	CM1SpeedPID.fdb = CMFLRx.RotateSpeed;
 
-	CM1SpeedPID.Calc(&CM1SpeedPID);
-	CMFLIntensity = 0;//CHASSIS_SPEED_ATTENUATION * CM1SpeedPID.output;
+//	CM1SpeedPID.Calc(&CM1SpeedPID);
+//	CMFLIntensity = 0;//CHASSIS_SPEED_ATTENUATION * CM1SpeedPID.output;
+				
+				
+	CMFLIntensity = ProcessPitchPID(FLAngleTarget,CMFLRx.angle,CMFLRx.RotateSpeed );//-gYroXs
 }
 
 //状态机切换
@@ -193,9 +197,9 @@ void setGMMotor()
 fw_PID_Regulator_t pitchPositionPID = fw_PID_INIT(8.0, 0.0, 0.0, 10000.0, 10000.0, 10000.0, 10000.0);
 fw_PID_Regulator_t pitchSpeedPID = fw_PID_INIT(40.0, 1.0, 15.0, 10000.0, 10000.0, 10000.0, 4000.0);
 
-fw_PID_Regulator_t yawPositionPID = fw_PID_INIT(500.0, 100.0, 3000, 15000.0, 10000.0, 27000.0, 27000.0);//等幅振荡P37.3 I11.9 D3.75  原26.1 8.0 1.1
-fw_PID_Regulator_t yawSpeedPID = fw_PID_INIT(50.0, 1.0, 10 , 20000.0, 20000.0, 20000.0, 20000.0);
-#define yaw_zero 3932//2840
+fw_PID_Regulator_t yawPositionPID = fw_PID_INIT(150.0, 10.0, 1000, 15000.0, 10000.0, 27000.0, 27000.0);//等幅振荡P37.3 I11.9 D3.75  原26.1 8.0 1.1
+fw_PID_Regulator_t yawSpeedPID = fw_PID_INIT(20.0, 1.0, 10 , 20000.0, 20000.0, 20000.0, 20000.0);
+#define yaw_zero 7780//2840
 #define pitch_zero 5009 
 #endif
 
@@ -205,15 +209,13 @@ float gap_angle = 0.0;
 //控制云台YAW轴
 void ControlYaw(void)
 {
-	static int lastPosition=0;
 	uint16_t yawZeroAngle = yaw_zero;
 			
 	yawRealAngle = -(GMYAWRx.angle - yawZeroAngle) * 360 / 8192.0f;
 	NORMALIZE_ANGLE180(yawRealAngle);
 			
 	MINMAX(yawAngleTarget, -90,90);					
-	yawIntensity = -ProcessYawPID(yawAngleTarget, yawRealAngle,(yawRealAngle-lastPosition)*10);//-gYroZs//ProcessYawPID	
-	lastPosition=yawRealAngle;
+	yawIntensity = -ProcessYawPID(yawAngleTarget, yawRealAngle,0);//-gYroZs//ProcessYawPID	
 }
 
 //控制云台pitch轴

@@ -21,6 +21,7 @@ static uint16_t CNT_1s = 75;		//用于避免四连发模式下两秒内连射8发过于密集的情况
 static uint16_t CNT_250ms = 18;	//???????????
 extern int16_t CMFLIntensity;
 uint16_t shootFlag=0;
+extern int16_t FLAngleTarget;
 
 void InitUserTimer(void)
 {
@@ -88,6 +89,7 @@ void RemoteShootControl(RemoteSwitch_t *sw, uint8_t val)
 				ShootState = SHOOTING;
 				if(shootFlag==0){
 					CMFLIntensity = 8000;
+					FLAngleTarget+=2000;
 				}else CMFLIntensity = 0;
 			}
 			else
