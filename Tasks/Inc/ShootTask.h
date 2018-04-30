@@ -15,9 +15,8 @@
 #include "includes.h"
 
 #define FRICTION_RAMP_TICK_COUNT				100
-#define FRICTION_WHEEL_MAX_DUTY         1600//1350
+#define FRICTION_WHEEL_MAX_DUTY         1220//1600//1350
 #define FRICTION_TIM  htim12
-
 typedef __packed enum
 {
 	FRICTION_WHEEL_OFF = 0,

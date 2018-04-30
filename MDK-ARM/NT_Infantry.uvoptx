@@ -197,37 +197,52 @@
         <Ww>
           <count>0</count>
           <WinNumber>1</WinNumber>
-          <ItemText>rc_cnt,0x0A</ItemText>
+          <ItemText>GMYAWRx.angle</ItemText>
         </Ww>
         <Ww>
           <count>1</count>
           <WinNumber>1</WinNumber>
-          <ItemText>can1_update,0x0A</ItemText>
+          <ItemText>yawRealAngle</ItemText>
         </Ww>
         <Ww>
           <count>2</count>
           <WinNumber>1</WinNumber>
-          <ItemText>ChassisSpeedRef.forward_back_ref</ItemText>
+          <ItemText>FLAngleTarget</ItemText>
         </Ww>
         <Ww>
           <count>3</count>
           <WinNumber>1</WinNumber>
-          <ItemText>ChassisSpeedRef</ItemText>
+          <ItemText>CMFLRx.angle</ItemText>
         </Ww>
         <Ww>
           <count>4</count>
           <WinNumber>1</WinNumber>
-          <ItemText>ChassisSpeedRef.left_right_ref</ItemText>
+          <ItemText>CMFLRx.RotateSpeed</ItemText>
         </Ww>
         <Ww>
           <count>5</count>
           <WinNumber>1</WinNumber>
-          <ItemText>GMYAWRx.angle</ItemText>
+          <ItemText>FLRealAngle</ItemText>
         </Ww>
         <Ww>
           <count>6</count>
           <WinNumber>1</WinNumber>
-          <ItemText>yawRealAngle</ItemText>
+          <ItemText>CMFLIntensity</ItemText>
+        </Ww>
+        <Ww>
+          <count>7</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>FLcount</ItemText>
+        </Ww>
+        <Ww>
+          <count>8</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>FLflag</ItemText>
+        </Ww>
+        <Ww>
+          <count>9</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>rotateFlag</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>
@@ -236,7 +251,7 @@
       <DebugFlag>
         <trace>0</trace>
         <periodic>1</periodic>
-        <aLwin>1</aLwin>
+        <aLwin>0</aLwin>
         <aCover>0</aCover>
         <aSer1>0</aSer1>
         <aSer2>0</aSer2>

@@ -22,6 +22,7 @@ extern RampGen_t FBSpeedRamp  ;
 
 float yawAngleTarget = 0.0;
 float pitchAngleTarget = 0.0;
+float FLAngleTarget = 80.0;
 
 //遥控器控制量初始化
 void RemoteTaskInit()

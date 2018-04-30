@@ -77,6 +77,7 @@ void PID_Reset(PID_Regulator_t *pid);
 void PID_Calc(PID_Regulator_t *pid);
 int16_t ProcessYawPID(float target, float position_feedback, float velocity_feedback);
 int16_t ProcessPitchPID(float target, float position_feedback, float velocity_feedback);
+int16_t ProcessFLPID(float target, float position_feedback, float velocity_feedback);
 int16_t PID_PROCESS_Double(fw_PID_Regulator_t pid_position,fw_PID_Regulator_t pid_speed,
                             float target, float position_feedback, float velocity_feedback);
 #endif

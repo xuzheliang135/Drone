@@ -70,9 +70,13 @@ typedef enum
 
 extern WorkState_e WorkState;
 extern fw_PID_Regulator_t pitchPositionPID;
-extern fw_PID_Regulator_t yawPositionPID;
 extern fw_PID_Regulator_t pitchSpeedPID;
+
+extern fw_PID_Regulator_t yawPositionPID;
 extern fw_PID_Regulator_t yawSpeedPID;
+
+extern fw_PID_Regulator_t FLPositionPID;
+extern fw_PID_Regulator_t FLSpeedPID;
 
 extern float yawRealAngle;
 extern float pitchRealAngle;

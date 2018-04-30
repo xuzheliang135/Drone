@@ -21,7 +21,8 @@ static uint16_t CNT_1s = 75;		//用于避免四连发模式下两秒内连射8发过于密集的情况
 static uint16_t CNT_250ms = 18;	//???????????
 extern int16_t CMFLIntensity;
 uint16_t shootFlag=0;
-extern int16_t FLAngleTarget;
+extern float FLAngleTarget;
+extern int FLflag;
 
 void InitUserTimer(void)
 {
@@ -51,11 +52,12 @@ void RemoteShootControl(RemoteSwitch_t *sw, uint8_t val)
 			}				 		
 		}break;
 		case FRICTION_WHEEL_START_TURNNING:
-		{
+		{	
 			if(sw->switch_value1 == REMOTE_SWITCH_CHANGE_3TO1)   
 			{
 				ShootState = NOSHOOTING;
 				SetFrictionWheelSpeed(1000);
+				HAL_GPIO_WritePin(GPIOG,GPIO_PIN_13,GPIO_PIN_RESET);//激光关
 				FrictionWheelState = FRICTION_WHEEL_OFF;
 				frictionRamp.ResetCounter(&frictionRamp);
 				shootFlag=0;
@@ -63,6 +65,7 @@ void RemoteShootControl(RemoteSwitch_t *sw, uint8_t val)
 			else
 			{
 				SetFrictionWheelSpeed(1000 + (FRICTION_WHEEL_MAX_DUTY-1000)*frictionRamp.Calc(&frictionRamp)); 
+				HAL_GPIO_WritePin(GPIOG,GPIO_PIN_13,GPIO_PIN_SET);//激光开
 				shootFlag=0;
 				//SetFrictionWheelSpeed(1300); 
 				//SetFrictionWheelSpeed(1000);
@@ -80,6 +83,7 @@ void RemoteShootControl(RemoteSwitch_t *sw, uint8_t val)
 			{
 				FrictionWheelState = FRICTION_WHEEL_OFF;				  
 				SetFrictionWheelSpeed(1000); 
+				HAL_GPIO_WritePin(GPIOG,GPIO_PIN_13,GPIO_PIN_RESET);//激光关
 				frictionRamp.ResetCounter(&frictionRamp);
 				ShootState = NOSHOOTING;
 				shootFlag=0;
@@ -88,8 +92,9 @@ void RemoteShootControl(RemoteSwitch_t *sw, uint8_t val)
 			{
 				ShootState = SHOOTING;
 				if(shootFlag==0){
-					CMFLIntensity = 8000;
-					FLAngleTarget+=2000;
+//					CMFLIntensity = 1000;
+					FLflag=0;
+//					FLAngleTarget=80;
 				}else CMFLIntensity = 0;
 			}
 			else

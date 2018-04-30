@@ -33,7 +33,12 @@ PID_Regulator_t CM4SpeedPID = CHASSIS_MOTOR_SPEED_PID_DEFAULT;
 int16_t CMFLIntensity = 0, CMFRIntensity = 0, CMBLIntensity = 0, CMBRIntensity = 0;
 int16_t yawIntensity = 0;		
 int16_t pitchIntensity = 0;
-int16_t FLAngleTarget=0;
+int FLcount=0;
+int FLflag=0;
+int rotateFlag=0;
+extern float FLAngleTarget;
+float FLRealAngle = 0.0;
+extern int shootFlag;
 
 //底盘PID初始化
 void CMControlInit(void)
@@ -44,23 +49,20 @@ void CMControlInit(void)
 	CM3SpeedPID.Reset(&CM3SpeedPID);
 	CM4SpeedPID.Reset(&CM4SpeedPID);
 }
-
 //单个底盘电机的控制，下同
 void ControlCMFL(void)
-{			
-//	CM1SpeedPID.ref =  ChassisSpeedRef.forward_back_ref*0.075 
-//											 + ChassisSpeedRef.left_right_ref*0.075 
-//											 + ChassisSpeedRef.rotate_ref*0.075;	
-//	CM1SpeedPID.ref = 160 * CM1SpeedPID.ref;
-//			
-//			
-//	CM1SpeedPID.fdb = CMFLRx.RotateSpeed;
-
-//	CM1SpeedPID.Calc(&CM1SpeedPID);
-//	CMFLIntensity = 0;//CHASSIS_SPEED_ATTENUATION * CM1SpeedPID.output;
-				
-				
-	CMFLIntensity = ProcessPitchPID(FLAngleTarget,CMFLRx.angle,CMFLRx.RotateSpeed );//-gYroXs
+{	
+	FLRealAngle=CMFLRx.angle*360/8191;
+	while(FLAngleTarget<0)FLAngleTarget+=360;
+	while(FLAngleTarget>360)FLAngleTarget-=360;
+	if(CMFLRx.RotateSpeed>0&&FLRealAngle>340)rotateFlag=1;
+	else if(CMFLRx.RotateSpeed>0&&FLRealAngle<20&&rotateFlag==1){
+		rotateFlag=0;
+		FLcount+=1;
+	}
+	if(FLcount==9)shootFlag=1,FLflag=1,FLcount=0;
+	if(FLflag==1)CMFLIntensity = ProcessPitchPID(FLAngleTarget,FLRealAngle,CMFLRx.RotateSpeed );//-gYroXs
+	else CMFLIntensity = 900;
 }
 
 //状态机切换
@@ -197,10 +199,13 @@ void setGMMotor()
 fw_PID_Regulator_t pitchPositionPID = fw_PID_INIT(8.0, 0.0, 0.0, 10000.0, 10000.0, 10000.0, 10000.0);
 fw_PID_Regulator_t pitchSpeedPID = fw_PID_INIT(40.0, 1.0, 15.0, 10000.0, 10000.0, 10000.0, 4000.0);
 
-fw_PID_Regulator_t yawPositionPID = fw_PID_INIT(150.0, 10.0, 1000, 15000.0, 10000.0, 27000.0, 27000.0);//等幅振荡P37.3 I11.9 D3.75  原26.1 8.0 1.1
+fw_PID_Regulator_t FLPositionPID = fw_PID_INIT(8.0, 0.0, 0.0, 400.0, 400.0, 400.0, 400.0);
+fw_PID_Regulator_t FLSpeedPID = fw_PID_INIT(40.0, 1.0, 15.0, 400.0, 400.0, 400.0, 400.0);
+
+fw_PID_Regulator_t yawPositionPID = fw_PID_INIT(60.0, 10.0, 1000, 1000.0, 10000.0, 23000.0, 23000.0);//等幅振荡P37.3 I11.9 D3.75  原26.1 8.0 1.1
 fw_PID_Regulator_t yawSpeedPID = fw_PID_INIT(20.0, 1.0, 10 , 20000.0, 20000.0, 20000.0, 20000.0);
-#define yaw_zero 7780//2840
-#define pitch_zero 5009 
+#define yaw_zero 4500
+#define pitch_zero 5865
 #endif
 
 float yawRealAngle = 0.0;
@@ -226,7 +231,7 @@ void ControlPitch(void)
 	pitchRealAngle = -(GMPITCHRx.angle - pitchZeroAngle) * 360 / 8192.0f;
 	NORMALIZE_ANGLE180(pitchRealAngle);
 
-	MINMAX(pitchAngleTarget, -180, 180);
+	MINMAX(pitchAngleTarget, -50, 30);
 				
 	pitchIntensity = -ProcessPitchPID(pitchAngleTarget,pitchRealAngle,1 );//-gYroXs
 }
@@ -243,7 +248,7 @@ void controlLoop()
 		
 		setGMMotor();
 		
-		//ControlCMFL();
+		ControlCMFL();
 		
 		setCMMotor();
 	}
@@ -283,10 +288,11 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 		}
 	}
 }
-extern int shootFlag;
+
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
 	if(GPIO_Pin&GPIO_PIN_4){
-		CMFLIntensity=0;
+//		if (HAL_GPIO_ReadPin(GPIOF,GPIO_PIN_4)==SET)CMFLIntensity=200;
+//		else CMFLIntensity=-200;
 		shootFlag=1;
 	}
 	

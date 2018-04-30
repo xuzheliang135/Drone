@@ -73,7 +73,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-	HAL_GPIO_WritePin(GPIOG,GPIO_PIN_13,GPIO_PIN_SET);
+	
   /* USER CODE END 1 */
 
   /* MCU Configuration----------------------------------------------------------*/
@@ -139,6 +139,7 @@ int main(void)
 	HAL_NVIC_EnableIRQ(USART1_IRQn);
 	HAL_NVIC_EnableIRQ(DMA2_Stream2_IRQn);
 	HAL_NVIC_EnableIRQ(TIM7_IRQn);
+	HAL_GPIO_WritePin(GPIOG,GPIO_PIN_13,GPIO_PIN_RESET);//激光关
 	#ifdef DEBUG_MODE
 		HAL_NVIC_EnableIRQ(TIM1_UP_TIM10_IRQn);
 	#endif
