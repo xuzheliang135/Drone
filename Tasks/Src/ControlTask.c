@@ -248,7 +248,7 @@ void controlLoop()
 		
 		setGMMotor();
 		
-		ControlCMFL();
+//		ControlCMFL();
 		
 		setCMMotor();
 	}

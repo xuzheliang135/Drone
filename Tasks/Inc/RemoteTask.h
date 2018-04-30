@@ -145,7 +145,7 @@ extern uint8_t rc_update;
 extern uint8_t rc_cnt;
 
 void RemoteDataProcess(uint8_t *pData);
-void InitRemoteControl();
-void RemoteTaskInit();
+void InitRemoteControl(void);
+void RemoteTaskInit(void);
 
 #endif /*__ REMOTETASK_H */

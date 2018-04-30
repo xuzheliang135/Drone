@@ -143,6 +143,6 @@ extern float gYroYs;
 extern float gYroZs;
 
 uint8_t InitMPU6500(void);
-void IMURefresh();
+void IMURefresh(void);
 
 #endif /*__ IMUTASK_H */

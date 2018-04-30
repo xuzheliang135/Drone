@@ -39,71 +39,29 @@ void SetFrictionWheelSpeed(uint16_t x)
 	
 void RemoteShootControl(RemoteSwitch_t *sw, uint8_t val) 
 {
-	switch(FrictionWheelState)
-	{
-		case FRICTION_WHEEL_OFF:
+	switch(sw->switch_value_raw){
+		case 1:{
+			SetFrictionWheelSpeed(1000);
+			frictionRamp.ResetCounter(&frictionRamp);
+			HAL_GPIO_WritePin(GPIOG,GPIO_PIN_13,GPIO_PIN_RESET);//激光关
+			shootFlag=0;
+			CMFLIntensity = 0;
+			break;
+		}
+		case 3:
 		{
-			if(sw->switch_value1 == REMOTE_SWITCH_CHANGE_1TO3)   
-			{
-				ShootState = NOSHOOTING;
-				frictionRamp.ResetCounter(&frictionRamp);
-				FrictionWheelState = FRICTION_WHEEL_START_TURNNING;
-				shootFlag=0;
-			}				 		
-		}break;
-		case FRICTION_WHEEL_START_TURNNING:
-		{	
-			if(sw->switch_value1 == REMOTE_SWITCH_CHANGE_3TO1)   
-			{
-				ShootState = NOSHOOTING;
-				SetFrictionWheelSpeed(1000);
-				HAL_GPIO_WritePin(GPIOG,GPIO_PIN_13,GPIO_PIN_RESET);//激光关
-				FrictionWheelState = FRICTION_WHEEL_OFF;
-				frictionRamp.ResetCounter(&frictionRamp);
-				shootFlag=0;
-			}
-			else
-			{
-				SetFrictionWheelSpeed(1000 + (FRICTION_WHEEL_MAX_DUTY-1000)*frictionRamp.Calc(&frictionRamp)); 
-				HAL_GPIO_WritePin(GPIOG,GPIO_PIN_13,GPIO_PIN_SET);//激光开
-				shootFlag=0;
-				//SetFrictionWheelSpeed(1300); 
-				//SetFrictionWheelSpeed(1000);
-				//g_friction_wheel_state = FRICTION_WHEEL_ON; 
-				if(frictionRamp.IsOverflow(&frictionRamp))
-				{
-					FrictionWheelState = FRICTION_WHEEL_ON; 	
-				}
-				
-			}
-		}break;
-		case FRICTION_WHEEL_ON:
-		{
-			if(sw->switch_value1 == REMOTE_SWITCH_CHANGE_3TO1)   
-			{
-				FrictionWheelState = FRICTION_WHEEL_OFF;				  
-				SetFrictionWheelSpeed(1000); 
-				HAL_GPIO_WritePin(GPIOG,GPIO_PIN_13,GPIO_PIN_RESET);//激光关
-				frictionRamp.ResetCounter(&frictionRamp);
-				ShootState = NOSHOOTING;
-				shootFlag=0;
-			}
-			else if(sw->switch_value_raw == 2)
-			{
-				ShootState = SHOOTING;
-				if(shootFlag==0){
-//					CMFLIntensity = 1000;
-					FLflag=0;
-//					FLAngleTarget=80;
-				}else CMFLIntensity = 0;
-			}
-			else
-			{
-				ShootState = NOSHOOTING;
-				CMFLIntensity = 0;
-				shootFlag=0;
-			}					 
-		} break;				
+			SetFrictionWheelSpeed(1000 + (FRICTION_WHEEL_MAX_DUTY-1000)*frictionRamp.Calc(&frictionRamp));
+			HAL_GPIO_WritePin(GPIOG,GPIO_PIN_13,GPIO_PIN_SET);//激光开
+			shootFlag=0;
+			CMFLIntensity = 0;
+			break;
+		}
+		case 2:{
+			HAL_GPIO_WritePin(GPIOG,GPIO_PIN_13,GPIO_PIN_SET);//激光开
+			SetFrictionWheelSpeed(1000 + (FRICTION_WHEEL_MAX_DUTY-1000)*frictionRamp.Calc(&frictionRamp));
+			CMFLIntensity = 1200;
+			break;
+		}
 	}
 }
 
