@@ -80,7 +80,7 @@ extern fw_PID_Regulator_t FLSpeedPID;
 
 extern float yawRealAngle;
 extern float pitchRealAngle;
-
-void CMControlInit(void);
+void ControlGMMotor(void);
+void setGMMotor(void);
 
 #endif /*__ CONTROLTASK_H */

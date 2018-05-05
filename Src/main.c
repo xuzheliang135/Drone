@@ -124,7 +124,6 @@ int main(void)
   /* USER CODE BEGIN 2 */
 	//各模块初始化
 	InitRemoteControl();
-	CMControlInit();
 	InitCanReception();
 	#ifdef DEBUG_MODE
 	ctrlUartInit();

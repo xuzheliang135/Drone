@@ -20,9 +20,10 @@ static uint32_t RotateCNT = 0;	//长按连发计数
 static uint16_t CNT_1s = 75;		//用于避免四连发模式下两秒内连射8发过于密集的情况
 static uint16_t CNT_250ms = 18;	//???????????
 extern int16_t CMFLIntensity;
-uint16_t shootFlag=0;
+volatile uint16_t shootFlag=0;
 extern float FLAngleTarget;
 extern int FLflag;
+void stopCMFL(void);
 
 void InitUserTimer(void)
 {
@@ -42,24 +43,26 @@ void RemoteShootControl(RemoteSwitch_t *sw, uint8_t val)
 	switch(sw->switch_value_raw){
 		case 1:{
 			SetFrictionWheelSpeed(1000);
-			frictionRamp.ResetCounter(&frictionRamp);
+			frictionRamp.ResetCounter(&frictionRamp);//调用摩擦轮关函数，就调用一次摩擦轮斜坡函数
 			HAL_GPIO_WritePin(GPIOG,GPIO_PIN_13,GPIO_PIN_RESET);//激光关
-			shootFlag=0;
 			CMFLIntensity = 0;
+			shootFlag=0;
 			break;
 		}
 		case 3:
 		{
 			SetFrictionWheelSpeed(1000 + (FRICTION_WHEEL_MAX_DUTY-1000)*frictionRamp.Calc(&frictionRamp));
 			HAL_GPIO_WritePin(GPIOG,GPIO_PIN_13,GPIO_PIN_SET);//激光开
-			shootFlag=0;
 			CMFLIntensity = 0;
+			shootFlag=0;
+			stopCMFL();
 			break;
 		}
 		case 2:{
 			HAL_GPIO_WritePin(GPIOG,GPIO_PIN_13,GPIO_PIN_SET);//激光开
 			SetFrictionWheelSpeed(1000 + (FRICTION_WHEEL_MAX_DUTY-1000)*frictionRamp.Calc(&frictionRamp));
-			CMFLIntensity = 1200;
+			if(shootFlag==0)CMFLIntensity = 1500;
+//			if(shootFlag==0)FLflag=0;
 			break;
 		}
 	}

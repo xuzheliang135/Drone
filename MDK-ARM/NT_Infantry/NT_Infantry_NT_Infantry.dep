@@ -602,15 +602,15 @@ I (../Inc/usart.h)(0x5AE1E516)
 I (../Inc/gpio.h)(0x5AE1E512)
 I (..\Tasks\Inc\RemoteTask.h)(0x5AE6C147)
 I (..\Tasks\Inc\pid_regulator.h)(0x5AE696D0)
-I (..\Tasks\Inc\ControlTask.h)(0x5AE69643)
+I (..\Tasks\Inc\ControlTask.h)(0x5AEB201E)
 I (..\Tasks\Inc\IMUTask.h)(0x5AE6C168)
 I (..\Tasks\Inc\CANTask.h)(0x5AE6C167)
-I (..\Tasks\Inc\ShootTask.h)(0x5AE6C147)
+I (..\Tasks\Inc\ShootTask.h)(0x5AE889FB)
 I (..\Tasks\Inc\drivers_ramp.h)(0x5A571716)
 I (..\Tasks\Inc\ManifoldTask.h)(0x5AE6C147)
 I (..\Tasks\Inc\JudgeTask.h)(0x5A587812)
 I (..\Tasks\Inc\UpperTask.h)(0x5A59EB28)
-F (..\Tasks\Src\ControlTask.c)(0x5AE6C29A)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Tasks\Inc --C99-I E:\GitHub\Drone\MDK-ARM\RTE-I "E:\Program Files\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include"-I "E:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx --C99-o nt_infantry\controltask.o --omf_browse nt_infantry\controltask.crf --depend nt_infantry\controltask.d)
+F (..\Tasks\Src\ControlTask.c)(0x5AEDA34B)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Tasks\Inc --C99-I E:\GitHub\Drone\MDK-ARM\RTE-I "E:\Program Files\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include"-I "E:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx --C99-o nt_infantry\controltask.o --omf_browse nt_infantry\controltask.crf --depend nt_infantry\controltask.d)
 I (../Inc/includes.h)(0x5AE6C147)
 I (../Inc/main.h)(0x5AE1E517)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A0C6174)
@@ -652,15 +652,15 @@ I (../Inc/usart.h)(0x5AE1E516)
 I (../Inc/gpio.h)(0x5AE1E512)
 I (..\Tasks\Inc\RemoteTask.h)(0x5AE6C147)
 I (..\Tasks\Inc\pid_regulator.h)(0x5AE696D0)
-I (..\Tasks\Inc\ControlTask.h)(0x5AE69643)
+I (..\Tasks\Inc\ControlTask.h)(0x5AEB201E)
 I (..\Tasks\Inc\IMUTask.h)(0x5AE6C168)
 I (..\Tasks\Inc\CANTask.h)(0x5AE6C167)
-I (..\Tasks\Inc\ShootTask.h)(0x5AE6C147)
+I (..\Tasks\Inc\ShootTask.h)(0x5AE889FB)
 I (..\Tasks\Inc\drivers_ramp.h)(0x5A571716)
 I (..\Tasks\Inc\ManifoldTask.h)(0x5AE6C147)
 I (..\Tasks\Inc\JudgeTask.h)(0x5A587812)
 I (..\Tasks\Inc\UpperTask.h)(0x5A59EB28)
-F (..\Tasks\Src\pid_regulator.c)(0x5AE69707)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Tasks\Inc --C99-I E:\GitHub\Drone\MDK-ARM\RTE-I "E:\Program Files\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include"-I "E:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx --C99-o nt_infantry\pid_regulator.o --omf_browse nt_infantry\pid_regulator.crf --depend nt_infantry\pid_regulator.d)
+F (..\Tasks\Src\pid_regulator.c)(0x5AE85C7B)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Tasks\Inc --C99-I E:\GitHub\Drone\MDK-ARM\RTE-I "E:\Program Files\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include"-I "E:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx --C99-o nt_infantry\pid_regulator.o --omf_browse nt_infantry\pid_regulator.crf --depend nt_infantry\pid_regulator.d)
 I (../Inc/includes.h)(0x5AE6C147)
 I (../Inc/main.h)(0x5AE1E517)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A0C6174)
@@ -702,10 +702,10 @@ I (../Inc/usart.h)(0x5AE1E516)
 I (../Inc/gpio.h)(0x5AE1E512)
 I (..\Tasks\Inc\RemoteTask.h)(0x5AE6C147)
 I (..\Tasks\Inc\pid_regulator.h)(0x5AE696D0)
-I (..\Tasks\Inc\ControlTask.h)(0x5AE69643)
+I (..\Tasks\Inc\ControlTask.h)(0x5AEB201E)
 I (..\Tasks\Inc\IMUTask.h)(0x5AE6C168)
 I (..\Tasks\Inc\CANTask.h)(0x5AE6C167)
-I (..\Tasks\Inc\ShootTask.h)(0x5AE6C147)
+I (..\Tasks\Inc\ShootTask.h)(0x5AE889FB)
 I (..\Tasks\Inc\drivers_ramp.h)(0x5A571716)
 I (..\Tasks\Inc\ManifoldTask.h)(0x5AE6C147)
 I (..\Tasks\Inc\JudgeTask.h)(0x5A587812)
@@ -752,15 +752,15 @@ I (../Inc/usart.h)(0x5AE1E516)
 I (../Inc/gpio.h)(0x5AE1E512)
 I (..\Tasks\Inc\RemoteTask.h)(0x5AE6C147)
 I (..\Tasks\Inc\pid_regulator.h)(0x5AE696D0)
-I (..\Tasks\Inc\ControlTask.h)(0x5AE69643)
+I (..\Tasks\Inc\ControlTask.h)(0x5AEB201E)
 I (..\Tasks\Inc\IMUTask.h)(0x5AE6C168)
 I (..\Tasks\Inc\CANTask.h)(0x5AE6C167)
-I (..\Tasks\Inc\ShootTask.h)(0x5AE6C147)
+I (..\Tasks\Inc\ShootTask.h)(0x5AE889FB)
 I (..\Tasks\Inc\drivers_ramp.h)(0x5A571716)
 I (..\Tasks\Inc\ManifoldTask.h)(0x5AE6C147)
 I (..\Tasks\Inc\JudgeTask.h)(0x5A587812)
 I (..\Tasks\Inc\UpperTask.h)(0x5A59EB28)
-F (..\Tasks\Src\ShootTask.c)(0x5AE6C5FD)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Tasks\Inc --C99-I E:\GitHub\Drone\MDK-ARM\RTE-I "E:\Program Files\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include"-I "E:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx --C99-o nt_infantry\shoottask.o --omf_browse nt_infantry\shoottask.crf --depend nt_infantry\shoottask.d)
+F (..\Tasks\Src\ShootTask.c)(0x5AEDA34B)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Tasks\Inc --C99-I E:\GitHub\Drone\MDK-ARM\RTE-I "E:\Program Files\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include"-I "E:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx --C99-o nt_infantry\shoottask.o --omf_browse nt_infantry\shoottask.crf --depend nt_infantry\shoottask.d)
 I (../Inc/includes.h)(0x5AE6C147)
 I (../Inc/main.h)(0x5AE1E517)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A0C6174)
@@ -802,10 +802,10 @@ I (../Inc/usart.h)(0x5AE1E516)
 I (../Inc/gpio.h)(0x5AE1E512)
 I (..\Tasks\Inc\RemoteTask.h)(0x5AE6C147)
 I (..\Tasks\Inc\pid_regulator.h)(0x5AE696D0)
-I (..\Tasks\Inc\ControlTask.h)(0x5AE69643)
+I (..\Tasks\Inc\ControlTask.h)(0x5AEB201E)
 I (..\Tasks\Inc\IMUTask.h)(0x5AE6C168)
 I (..\Tasks\Inc\CANTask.h)(0x5AE6C167)
-I (..\Tasks\Inc\ShootTask.h)(0x5AE6C147)
+I (..\Tasks\Inc\ShootTask.h)(0x5AE889FB)
 I (..\Tasks\Inc\drivers_ramp.h)(0x5A571716)
 I (..\Tasks\Inc\ManifoldTask.h)(0x5AE6C147)
 I (..\Tasks\Inc\JudgeTask.h)(0x5A587812)
@@ -844,7 +844,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h)(0x5A0C6175)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h)(0x5A0C6175)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h)(0x5A0C6175)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x5A0C6175)
-F (../Src/main.c)(0x5AE5D641)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Tasks\Inc --C99-I E:\GitHub\Drone\MDK-ARM\RTE-I "E:\Program Files\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include"-I "E:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx --C99-o nt_infantry\main.o --omf_browse nt_infantry\main.crf --depend nt_infantry\main.d)
+F (../Src/main.c)(0x5AEB201E)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Tasks\Inc --C99-I E:\GitHub\Drone\MDK-ARM\RTE-I "E:\Program Files\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include"-I "E:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx --C99-o nt_infantry\main.o --omf_browse nt_infantry\main.crf --depend nt_infantry\main.d)
 I (../Inc/main.h)(0x5AE1E517)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A0C6174)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AE1E516)
@@ -886,15 +886,15 @@ I (../Inc/gpio.h)(0x5AE1E512)
 I (../Inc/includes.h)(0x5AE6C147)
 I (..\Tasks\Inc\RemoteTask.h)(0x5AE6C147)
 I (..\Tasks\Inc\pid_regulator.h)(0x5AE696D0)
-I (..\Tasks\Inc\ControlTask.h)(0x5AE69643)
+I (..\Tasks\Inc\ControlTask.h)(0x5AEB201E)
 I (..\Tasks\Inc\IMUTask.h)(0x5AE6C168)
 I (..\Tasks\Inc\CANTask.h)(0x5AE6C167)
-I (..\Tasks\Inc\ShootTask.h)(0x5AE6C147)
+I (..\Tasks\Inc\ShootTask.h)(0x5AE889FB)
 I (..\Tasks\Inc\drivers_ramp.h)(0x5A571716)
 I (..\Tasks\Inc\ManifoldTask.h)(0x5AE6C147)
 I (..\Tasks\Inc\JudgeTask.h)(0x5A587812)
 I (..\Tasks\Inc\UpperTask.h)(0x5A59EB28)
-F (../Src/gpio.c)(0x5AE68615)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Tasks\Inc --C99-I E:\GitHub\Drone\MDK-ARM\RTE-I "E:\Program Files\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include"-I "E:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx --C99-o nt_infantry\gpio.o --omf_browse nt_infantry\gpio.crf --depend nt_infantry\gpio.d)
+F (../Src/gpio.c)(0x5AEDA34B)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Tasks\Inc --C99-I E:\GitHub\Drone\MDK-ARM\RTE-I "E:\Program Files\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include"-I "E:\Program Files\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F427xx -DUSE_HAL_DRIVER -DSTM32F427xx --C99-o nt_infantry\gpio.o --omf_browse nt_infantry\gpio.crf --depend nt_infantry\gpio.d)
 I (../Inc/gpio.h)(0x5AE1E512)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x5A0C6174)
 I (../Inc/stm32f4xx_hal_conf.h)(0x5AE1E516)
