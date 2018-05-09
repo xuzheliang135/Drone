@@ -24,13 +24,10 @@
 #include "RemoteTask.h"
 #include "pid_regulator.h"
 #include "ControlTask.h"
-#include "IMUTask.h"
+#include "Judge.h"
 #include "CANTask.h"
 //#include "pid_regulator.h"
 #include "ShootTask.h"
 #include "drivers_ramp.h"
-#include "ManifoldTask.h"
-#include "JudgeTask.h"
-#include "UpperTask.h"
 
 #endif /* __INCLUDES_H */

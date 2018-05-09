@@ -71,7 +71,7 @@ void MouseKeyControlProcess(Mouse *mouse, Key *key)
 		VAL_LIMIT(mouse->y, -150, 150); 
 	
 		pitchAngleTarget -= mouse->y* MOUSE_TO_PITCH_ANGLE_INC_FACT;  
-		yawAngleTarget    -= mouse->x* MOUSE_TO_YAW_ANGLE_INC_FACT;
+		yawAngleTarget    += mouse->x* MOUSE_TO_YAW_ANGLE_INC_FACT;
 
 		//speed mode: normal speed/high speed 
 		if(key->v & 0x10)//Shift
@@ -291,5 +291,15 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *UartHandle)
 {
 	if(UartHandle == &RC_UART){
 		rc_update = 1;
+	}
+	else if(UartHandle == &MANIFOLD_UART)
+	{
+		#ifdef DEBUG_MODE
+		ctrlUartRxCpltCallback();
+		#endif
+	}
+	else if(UartHandle == &JUDGE_UART)
+	{
+		judgeUartRxCpltCallback();  //裁判系统数据解算
 	}
 }   

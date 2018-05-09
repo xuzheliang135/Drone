@@ -33,6 +33,9 @@ fw_PID_Regulator_t yawSpeedPID = fw_PID_INIT(20.0, 1.0, 10 , 20000.0, 20000.0, 2
 #define LED_RED_ON()      HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin,GPIO_PIN_RESET)
 #define PREPARE_TIME 2000//启动时间
 #define ABS(x) x>0?x:-x
+
+void stopCMFL(void);
+
 WorkState_e WorkState = PREPARE_STATE;
 uint16_t prepare_time = 0;
 
@@ -49,7 +52,18 @@ int rotateFlag=0;
 extern float FLAngleTarget;
 float FLRealAngle = 0.0;
 extern int shootFlag;
-
+extern Shoot_State_e ShootState;
+void preventLock(){
+	static int count=0;
+	static int reversed=0;
+	static int time_count=0;
+	if(CMFLRx.RotateSpeed > 20||CMFLRx.RotateSpeed < -20)count+=1;
+	else count=0;
+	if(count>=250)CMFLIntensity = -3000,reversed = 1;
+	if(reversed == 1)time_count += 1;
+	else time_count = 0;
+	if(time_count >= 100)reversed = 0,count = 0,CMFLIntensity = 0;
+}
 void stopCMFL(){
 	if(CMFLRx.RotateSpeed>20||CMFLRx.RotateSpeed<-20)CMFLIntensity = -CMFLRx.RotateSpeed*2;
 	else CMFLIntensity = 0;
@@ -84,11 +98,6 @@ void calculateGMMotor(){
 //控制云台YAW轴,PITCH轴
 void ControlGMMotor(void)
 {	
-//	static int count=0;
-//	if(ABS(pitchAngleTarget - pitchRealAngle) >=1 )count++;
-//	else count = 0;
-//	if(count>=500&&pitchAngleTarget>0)pitchAngleTarget -= 1,HAL_GPIO_WritePin(GPIOG,GPIO_PIN_13,GPIO_PIN_SET);
-//	else if(count>=500&&pitchAngleTarget<0)pitchAngleTarget += 1,HAL_GPIO_WritePin(GPIOG,GPIO_PIN_13,GPIO_PIN_SET);
 	calculateGMMotor();
 	yawIntensity = -ProcessYawPID(yawAngleTarget, yawRealAngle,0);
 	pitchIntensity = -ProcessPitchPID(pitchAngleTarget,pitchRealAngle,0);
@@ -242,11 +251,13 @@ void controlLoop()
 	if(WorkState != STOP_STATE)
 	{
 		ControlGMMotor();
+//		if(ChassisSpeedRef.forward_back_ref>=200) CMFLIntensity = 8000;
 		setGMMotor();
 		
 //		ControlCMFL();
 		if(shootFlag==1)stopCMFL();
 		setCMMotor();
+//		if(CMFLIntensity == 1500)preventLock();
 	}
 }
 
@@ -286,11 +297,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 }
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
-//	static int i=0;
-//	if(GPIO_Pin&GPIO_PIN_4){
-//		i+=1;
-//		if(i>=2)shootFlag=1,i=0;
-//	}
+	
 	if(GPIO_Pin&GPIO_PIN_4){
 		shootFlag=1;
 	}

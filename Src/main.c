@@ -125,6 +125,7 @@ int main(void)
 	//各模块初始化
 	InitRemoteControl();
 	InitCanReception();
+	InitJudgeUart();
 	#ifdef DEBUG_MODE
 	ctrlUartInit();
 	HAL_TIM_Base_Start_IT(&htim10);

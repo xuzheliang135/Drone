@@ -10,6 +10,8 @@
   ******************************************************************************
   */
 #include "includes.h"
+#define LASER_ON() HAL_GPIO_WritePin(GPIOG,GPIO_PIN_13,GPIO_PIN_SET)//激光开
+#define LASER_OFF() HAL_GPIO_WritePin(GPIOG,GPIO_PIN_13,GPIO_PIN_RESET)//激光关
 FrictionWheelState_e FrictionWheelState;
 Shoot_State_e ShootState;
 RampGen_t frictionRamp = RAMP_GEN_DAFAULT;		//摩擦轮斜坡
@@ -44,7 +46,7 @@ void RemoteShootControl(RemoteSwitch_t *sw, uint8_t val)
 		case 1:{
 			SetFrictionWheelSpeed(1000);
 			frictionRamp.ResetCounter(&frictionRamp);//调用摩擦轮关函数，就调用一次摩擦轮斜坡函数
-			HAL_GPIO_WritePin(GPIOG,GPIO_PIN_13,GPIO_PIN_RESET);//激光关
+			LASER_OFF();
 			CMFLIntensity = 0;
 			shootFlag=0;
 			break;
@@ -52,17 +54,16 @@ void RemoteShootControl(RemoteSwitch_t *sw, uint8_t val)
 		case 3:
 		{
 			SetFrictionWheelSpeed(1000 + (FRICTION_WHEEL_MAX_DUTY-1000)*frictionRamp.Calc(&frictionRamp));
-			HAL_GPIO_WritePin(GPIOG,GPIO_PIN_13,GPIO_PIN_SET);//激光开
+			LASER_ON();
 			CMFLIntensity = 0;
 			shootFlag=0;
 			stopCMFL();
 			break;
 		}
 		case 2:{
-			HAL_GPIO_WritePin(GPIOG,GPIO_PIN_13,GPIO_PIN_SET);//激光开
+			LASER_ON();
 			SetFrictionWheelSpeed(1000 + (FRICTION_WHEEL_MAX_DUTY-1000)*frictionRamp.Calc(&frictionRamp));
 			if(shootFlag==0)CMFLIntensity = 1500;
-//			if(shootFlag==0)FLflag=0;
 			break;
 		}
 	}
@@ -83,7 +84,7 @@ void MouseShootControl(Mouse *mouse)
 				ShootState = NOSHOOTING;
 				frictionRamp.ResetCounter(&frictionRamp);
 				FrictionWheelState = FRICTION_WHEEL_START_TURNNING;	 
-				//LASER_ON(); 
+				LASER_ON(); 
 				closeDelayCount = 0;
 			}				 		
 		}break;
@@ -99,10 +100,11 @@ void MouseShootControl(Mouse *mouse)
 			}
 			if(closeDelayCount>50)   
 			{
-				//LASER_OFF();//zy0802
+				LASER_OFF();//zy0802
 				FrictionWheelState = FRICTION_WHEEL_OFF;				  
 				SetFrictionWheelSpeed(1000); 
 				frictionRamp.ResetCounter(&frictionRamp);
+				CMFLIntensity = 0;
 				ShootState = NOSHOOTING;
 			}
 			else
@@ -128,15 +130,18 @@ void MouseShootControl(Mouse *mouse)
 			}
 			if(closeDelayCount>50)   //
 			{
-				//LASER_OFF();//zy0802
+				LASER_OFF();//zy0802
 				FrictionWheelState = FRICTION_WHEEL_OFF;				  
 				SetFrictionWheelSpeed(1000); 
 				frictionRamp.ResetCounter(&frictionRamp);
+				CMFLIntensity = 0;
 				ShootState = NOSHOOTING;
 			}			
 			else if(mouse->last_press_l == 0 && mouse->press_l== 1)  //检测鼠标左键单击动作
 			{
 				ShootState = SHOOTING;
+				shootFlag=0;
+				if(shootFlag==0)CMFLIntensity = 1500;
 				/*if(getLaunchMode() == SINGLE_MULTI && FrictionWheelState == FRICTION_WHEEL_ON)		//?????,??????
 				{
 					if(CNT_250ms>17)
@@ -162,7 +167,8 @@ void MouseShootControl(Mouse *mouse)
 			else if(mouse->last_press_l == 0 && mouse->press_l== 0)	//松开鼠标左键的状态
 			{
 				ShootState = NOSHOOTING;	
-				RotateCNT = 0;			
+				RotateCNT = 0;
+				//shootFlag=0;
 			}			
 			else if(mouse->last_press_l == 1 && mouse->press_l== 1 /*&& getLaunchMode() == SINGLE_MULTI*/)//【单发模式下】长按，执行：
 			{

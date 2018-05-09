@@ -532,6 +532,11 @@
               <FileType>4</FileType>
               <FilePath>..\Tasks\Src\RMLib.lib</FilePath>
             </File>
+            <File>
+              <FileName>Judge.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Tasks\Src\Judge.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

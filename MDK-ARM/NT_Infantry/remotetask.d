@@ -43,10 +43,7 @@ nt_infantry\remotetask.o: ..\Tasks\Inc\RemoteTask.h
 nt_infantry\remotetask.o: ../Inc/includes.h
 nt_infantry\remotetask.o: ..\Tasks\Inc\pid_regulator.h
 nt_infantry\remotetask.o: ..\Tasks\Inc\ControlTask.h
-nt_infantry\remotetask.o: ..\Tasks\Inc\IMUTask.h
+nt_infantry\remotetask.o: ..\Tasks\Inc\Judge.h
 nt_infantry\remotetask.o: ..\Tasks\Inc\CANTask.h
 nt_infantry\remotetask.o: ..\Tasks\Inc\ShootTask.h
 nt_infantry\remotetask.o: ..\Tasks\Inc\drivers_ramp.h
-nt_infantry\remotetask.o: ..\Tasks\Inc\ManifoldTask.h
-nt_infantry\remotetask.o: ..\Tasks\Inc\JudgeTask.h
-nt_infantry\remotetask.o: ..\Tasks\Inc\UpperTask.h
