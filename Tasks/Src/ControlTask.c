@@ -68,7 +68,7 @@ void stopCMFL(){
 	if(CMFLRx.RotateSpeed>20||CMFLRx.RotateSpeed<-20)CMFLIntensity = -CMFLRx.RotateSpeed*2;
 	else CMFLIntensity = 0;
 }
-//拨弹电机的控制
+//拨弹电机的控制（未使用）
 void ControlCMFL(void)
 {	
 	FLRealAngle=CMFLRx.angle*360/8191;
@@ -205,8 +205,6 @@ void setGMMotor(void)
 	CMGMMOTOR_CAN.pTxMsg->IDE = CAN_ID_STD;
 	CMGMMOTOR_CAN.pTxMsg->RTR = CAN_RTR_DATA;
 	CMGMMOTOR_CAN.pTxMsg->DLC = 0x08;
-//	pitchIntensity=ChassisSpeedRef.forward_back_ref*90;
-//	yawIntensity=0;
 	CMGMMOTOR_CAN.pTxMsg->Data[0] = (uint8_t)(pitchIntensity >> 8);
 	CMGMMOTOR_CAN.pTxMsg->Data[1] = (uint8_t)pitchIntensity;
 	CMGMMOTOR_CAN.pTxMsg->Data[2] = (uint8_t)(yawIntensity >> 8);
@@ -251,11 +249,10 @@ void controlLoop()
 	if(WorkState != STOP_STATE)
 	{
 		ControlGMMotor();
-//		if(ChassisSpeedRef.forward_back_ref>=200) CMFLIntensity = 8000;
 		setGMMotor();
 		
 //		ControlCMFL();
-		if(shootFlag==1)stopCMFL();
+		if(shootFlag==1)stopCMFL();//使拨弹电机停转
 		setCMMotor();
 //		if(CMFLIntensity == 1500)preventLock();
 	}
